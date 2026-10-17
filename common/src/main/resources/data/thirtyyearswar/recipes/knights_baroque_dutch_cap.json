@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_dutch_cap",
+    "count": 1
+  },
+  "pattern": [
+    " AA",
+    "A A"
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:felt_fabric"
+    }
+  }
+}

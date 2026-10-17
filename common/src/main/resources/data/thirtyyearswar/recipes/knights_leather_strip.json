@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:leather_strip",
+    "count": 3
+  },
+  "pattern": [
+    "BB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:leather"
+    }
+  }
+}

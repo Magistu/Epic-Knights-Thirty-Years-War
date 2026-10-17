@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "thirtyyearswar:item/baroque_dutch_cap",
+    "layer1": "thirtyyearswar:item/baroque_dutch_cap_overlay"
+  }
+}

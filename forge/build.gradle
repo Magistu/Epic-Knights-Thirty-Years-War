@@ -1,0 +1,97 @@
+plugins {
+    id "com.github.johnrengelman.shadow" version "7.0.0"
+}
+
+architectury {
+    platformSetupLoomIde()
+    forge()
+}
+
+version = rootProject.mod_version
+archivesBaseName = "epic-knights-thirty-years-war-${rootProject.display_minecraft_version}-forge"
+
+loom {
+
+    forge {
+    }
+}
+
+configurations {
+    common
+    shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
+    compileClasspath.extendsFrom common
+    runtimeClasspath.extendsFrom common
+    developmentForge.extendsFrom common
+}
+
+dependencies {
+    forge "net.minecraftforge:forge:${rootProject.minecraft_version}-${rootProject.forge_version}"
+
+    modApi "dev.architectury:architectury-forge:${rootProject.architectury_version}"
+    modImplementation "me.shedaniel.cloth:cloth-config-forge:${rootProject.cloth_config_version}"
+    modImplementation "maven.modrinth:epic-knights-shields-armor-and-weapons:${rootProject.epic_knights_version}-forge"
+
+    common(project(path: ":common", configuration: "namedElements")) { transitive false }
+    shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+}
+
+processResources {
+    def authors      = project.mod_authors.toString().split(",")*.trim().findAll{it}.join(", ")
+    def contributors = project.mod_contributors.toString().split(",")*.trim().findAll{it}.join(", ")
+
+    def expandProps = [
+            "mod_id"                        : project.mod_id,
+            "mod_name"                      : project.mod_display_name,
+            "mod_version"                   : project.mod_version,
+            "mod_description"               : project.mod_description,
+            "mod_authors"                   : authors,
+            "mod_contributors"              : contributors,
+            "mod_license"                   : project.mod_license,
+            "mod_discord_url"               : project.mod_discord_url,
+            "mod_git_url"                   : project.mod_git_url,
+            "mod_issues_url"                : project.mod_issues_url,
+            "mod_page_url"                  : project.mod_page_url,
+            "minecraft_min_version"         : project.minecraft_min_version,
+            "minecraft_max_version"         : project.minecraft_max_version,
+            "forge_version_range"           : project.forge_version_range,
+            "forge_loader_version_range"    : project.forge_version_range,
+            "architectury_api_version"      : (project.findProperty("architectury_api_version") ?: "").toString(),
+            "cloth_config_version"          : (project.findProperty("cloth_config_version") ?: "").toString(),
+            "epic_knights_version"          : (project.findProperty("epic_knights_version") ?: "").toString(),
+    ]
+
+    inputs.properties(expandProps)
+
+    filesMatching('META-INF/mods.toml') {
+        expand(expandProps)
+    }
+}
+
+shadowJar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    configurations = [project.configurations.shadowCommon]
+    archiveClassifier.set("dev-shadow")
+}
+
+remapJar {
+    inputFile.set shadowJar.archiveFile
+    dependsOn shadowJar
+    archiveClassifier.set(null)
+}
+
+jar {
+    archiveClassifier.set("dev")
+}
+
+sourcesJar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    def commonSources = project(":common").sourcesJar
+    dependsOn commonSources
+    from commonSources.archiveFile.map { zipTree(it) }
+}
+
+components.java {
+    withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
+        skip()
+    }
+}

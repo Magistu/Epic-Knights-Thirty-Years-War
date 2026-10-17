@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "thirtyyearswar:baroque_death_helmet"
+  },
+  "result": "thirtyyearswar:baroque_dark_death_helmet",
+  "experience": 0.1,
+  "cookingtime": 200
+}

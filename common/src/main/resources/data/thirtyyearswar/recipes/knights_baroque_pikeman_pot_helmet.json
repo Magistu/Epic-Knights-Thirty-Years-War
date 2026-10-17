@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_pikeman_pot_helmet",
+    "count": 1
+  },
+  "pattern": [
+    " A ",
+    "CDC"
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:steel_ingot"
+    },
+    "C": {
+      "item": "thirtyyearswar:small_steel_plate"
+    },
+    "D": {
+      "item": "thirtyyearswar:baroque_skull_cap"
+    }
+  }
+}

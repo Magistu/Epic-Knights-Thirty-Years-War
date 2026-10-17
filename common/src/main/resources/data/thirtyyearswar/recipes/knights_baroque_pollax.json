@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_steel_pollax",
+    "count": 1
+  },
+  "pattern": [
+    " C ",
+    "BDB",
+    " E "
+  ],
+  "key": {
+    "B": {
+      "item": "thirtyyearswar:steel_ingot"
+    },
+    "C": {
+      "item": "thirtyyearswar:steel_plate"
+    },
+    "D": {
+      "item": "thirtyyearswar:pole"
+    },
+    "E": {
+      "item": "thirtyyearswar:hilt"
+    }
+  }
+}

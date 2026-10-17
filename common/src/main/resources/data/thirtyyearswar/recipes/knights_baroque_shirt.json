@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_shirt",
+    "count": 1
+  },
+  "pattern": [
+    "B B",
+    "BBB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "thirtyyearswar:woollen_cloth"
+    }
+  }
+}

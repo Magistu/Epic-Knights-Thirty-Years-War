@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_waist_sash",
+    "count": 1
+  },
+  "pattern": [
+    "BB",
+    " B"
+  ],
+  "key": {
+    "B": {
+      "item": "thirtyyearswar:woollen_cloth"
+    }
+  }
+}

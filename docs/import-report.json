@@ -1,0 +1,1430 @@
+{
+  "source_packs": [
+    "Baroque",
+    "30YW"
+  ],
+  "items": [
+    {
+      "id": "baroque_apron_skirt",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_apron_skirt.json",
+      "kind": "armor",
+      "durability": 2000,
+      "geometry": "geometry.knights_baroque_skirt",
+      "model": "knights_baroque_skirt",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "LEGGINGS",
+      "defense": 1,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_armour",
+      "source": "BaroqueBP/items/steel/knights_baroque_armour.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_pikeman_armour",
+      "model": "knights_pikeman_armour",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 4,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0.2
+    },
+    {
+      "id": "baroque_barred_closed_burgonet",
+      "source": "BaroqueBP/items/steel/knights_baroque_barred_closed_burgonet.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_grilled_closed_burgonet",
+      "model": "knights_baroque_grilled_closed_burgonet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 6,
+      "enchantability": 9,
+      "toughness": 3.0,
+      "knockback": 0.5
+    },
+    {
+      "id": "baroque_barred_lobstertail_helmet",
+      "source": "BaroqueBP/items/steel/knights_baroque_barred_lobstertail_helmet.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_lobstertail_helmet",
+      "model": "knights_baroque_lobstertail_helmet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 5,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_bodice",
+      "source": "BaroqueBP/items/dyeable/hat/knights_baroque_bodice.json",
+      "kind": "armor",
+      "durability": 300,
+      "geometry": "geometry.knights_baroque_doublet",
+      "model": "knights_baroque_doublet",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 3,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_breeches",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_breeches.json",
+      "kind": "armor",
+      "durability": 2000,
+      "geometry": "geometry.knights_baroque_breeches",
+      "model": "knights_baroque_breeches",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "LEGGINGS",
+      "defense": 3,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_buff_coat",
+      "source": "BaroqueBP/items/steel/knights_baroque_buff_coat.json",
+      "kind": "armor",
+      "durability": 400,
+      "geometry": "geometry.knights_baroque_cavalry_armour",
+      "model": "knights_baroque_cavalry_armour",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 4,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_buff_waistcoat",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_buff_waistcoat.json",
+      "kind": "armor",
+      "durability": 400,
+      "geometry": "geometry.knights_baroque_doublet",
+      "model": "knights_baroque_doublet",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 3,
+      "enchantability": 9,
+      "toughness": 1.0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_cabasset_helmet",
+      "source": "BaroqueBP/items/steel/knights_baroque_cabasset_helmet.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_cabasset_helmet",
+      "model": "knights_baroque_cabasset_helmet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 4,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_cavalier_hat",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_cavalier_hat.json",
+      "kind": "armor",
+      "durability": 2000,
+      "geometry": "geometry.knights_baroque_cavalier_hat",
+      "model": "knights_baroque_cavalier_hat",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 2,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_cavalry_armour",
+      "source": "BaroqueBP/items/steel/knights_baroque_cavalry_armour.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_cavalry_armour",
+      "model": "knights_baroque_cavalry_armour",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 7,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0.2
+    },
+    {
+      "id": "baroque_cavalry_armour_gauntlet",
+      "source": "BaroqueBP/items/steel/knights_baroque_cavalry_armour_gauntlet.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_cavalry_armour",
+      "model": "knights_baroque_cavalry_armour",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 8,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0.2
+    },
+    {
+      "id": "baroque_cloak",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_cloak.json",
+      "kind": "decoration",
+      "durability": 2000,
+      "geometry": "geometry.knights_baroque_cloak",
+      "model": "knights_baroque_cloak",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": true,
+      "slot": "CHESTPLATE",
+      "defense": 2,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_closed_helmet",
+      "source": "BaroqueBP/items/steel/knights_baroque_closed_helmet.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_closed_helmet",
+      "model": "knights_baroque_closed_helmet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 6,
+      "enchantability": 9,
+      "toughness": 3.0,
+      "knockback": 0.5
+    },
+    {
+      "id": "baroque_coat",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_coat.json",
+      "kind": "armor",
+      "durability": 300,
+      "geometry": "geometry.knights_baroque_doublet",
+      "model": "knights_baroque_doublet",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 3,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_cuirass",
+      "source": "BaroqueBP/items/steel/knights_baroque_cuirass.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_pikeman_armour",
+      "model": "knights_pikeman_armour",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 3,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0.2
+    },
+    {
+      "id": "baroque_cuirassier_armour",
+      "source": "BaroqueBP/items/steel/knights_baroque_cuirassier_armour.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_cuirassier_armour",
+      "model": "knights_baroque_cuirassier_armour",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 9,
+      "enchantability": 9,
+      "toughness": 3.0,
+      "knockback": 0.5
+    },
+    {
+      "id": "baroque_dark_barred_closed_burgonet",
+      "source": "BaroqueBP/items/dark/knights_baroque_dark_barred_closed_burgonet.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_grilled_closed_burgonet",
+      "model": "knights_baroque_grilled_closed_burgonet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 6,
+      "enchantability": 9,
+      "toughness": 3.0,
+      "knockback": 0.5
+    },
+    {
+      "id": "baroque_dark_barred_lobstertail_helmet",
+      "source": "BaroqueBP/items/dark/knights_baroque_dark_barred_lobstertail_helmet.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_lobstertail_helmet",
+      "model": "knights_baroque_lobstertail_helmet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 5,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_dark_cabasset_helmet",
+      "source": "BaroqueBP/items/dark/knights_baroque_dark_cabasset_helmet.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_cabasset_helmet",
+      "model": "knights_baroque_cabasset_helmet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 4,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_dark_cavalry_armour",
+      "source": "BaroqueBP/items/dark/knights_baroque_dark_cavalry_armour.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_cavalry_armour",
+      "model": "knights_baroque_cavalry_armour",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 7,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0.2
+    },
+    {
+      "id": "baroque_dark_cavalry_armour_gauntlet",
+      "source": "BaroqueBP/items/dark/knights_baroque_dark_cavalry_armour_gauntlet.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_cavalry_armour",
+      "model": "knights_baroque_cavalry_armour",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 8,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0.2
+    },
+    {
+      "id": "baroque_dark_closed_helmet",
+      "source": "BaroqueBP/items/dark/knights_baroque_dark_closed_helmet.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_closed_helmet",
+      "model": "knights_baroque_closed_helmet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 6,
+      "enchantability": 9,
+      "toughness": 3.0,
+      "knockback": 0.5
+    },
+    {
+      "id": "baroque_dark_cuirassier_armour",
+      "source": "BaroqueBP/items/dark/knights_baroque_dark_cuirassier_armour.json",
+      "kind": "armor",
+      "durability": 1000,
+      "geometry": "geometry.knights_baroque_cuirassier_armour",
+      "model": "knights_baroque_cuirassier_armour",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 9,
+      "enchantability": 9,
+      "toughness": 3.0,
+      "knockback": 0.5
+    },
+    {
+      "id": "baroque_dark_death_helmet",
+      "source": "BaroqueBP/items/dark/knights_baroque_dark_death_helmet.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_savoyard_helmet",
+      "model": "knights_baroque_savoyard_helmet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 6,
+      "enchantability": 9,
+      "toughness": 3.0,
+      "knockback": 0.5
+    },
+    {
+      "id": "baroque_dark_grilled_closed_burgonet",
+      "source": "BaroqueBP/items/dark/knights_baroque_dark_grilled_closed_burgonet.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_grilled_closed_burgonet",
+      "model": "knights_baroque_grilled_closed_burgonet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 6,
+      "enchantability": 9,
+      "toughness": 3.0,
+      "knockback": 0.5
+    },
+    {
+      "id": "baroque_dark_lobstertail_helmet",
+      "source": "BaroqueBP/items/dark/knights_baroque_dark_lobstertail_helmet.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_lobstertail_helmet",
+      "model": "knights_baroque_lobstertail_helmet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 5,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_dark_officer_armour",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_dark_officer_armour.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_doublet",
+      "model": "knights_baroque_doublet",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 7,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0.2
+    },
+    {
+      "id": "baroque_dark_open_burgonet",
+      "source": "BaroqueBP/items/dark/knights_baroque_dark_open_burgonet.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_open_burgonet",
+      "model": "knights_baroque_open_burgonet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 5,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_dark_open_closed_burgonet",
+      "source": "BaroqueBP/items/dark/knights_baroque_dark_open_closed_burgonet.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_grilled_closed_burgonet",
+      "model": "knights_baroque_grilled_closed_burgonet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 5,
+      "enchantability": 9,
+      "toughness": 3.0,
+      "knockback": 0.5
+    },
+    {
+      "id": "baroque_dark_pikeman_armour",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_dark_pikeman_armour.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_pikeman_armour",
+      "model": "knights_pikeman_armour",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 6,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0.2
+    },
+    {
+      "id": "baroque_dark_pikeman_cuirass",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_dark_pikeman_cuirass.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_pikeman_armour",
+      "model": "knights_pikeman_armour",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 5,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0.1
+    },
+    {
+      "id": "baroque_dark_pikeman_pot_helmet",
+      "source": "BaroqueBP/items/dark/knights_baroque_dark_pikeman_pot_helmet.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_pikeman_pot_helmet",
+      "model": "knights_baroque_pikeman_pot_helmet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 4,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_dark_savoyard_helmet",
+      "source": "BaroqueBP/items/dark/knights_baroque_dark_savoyard_helmet.json",
+      "kind": "armor",
+      "durability": 750,
+      "geometry": "geometry.knights_baroque_savoyard_helmet",
+      "model": "knights_baroque_savoyard_helmet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 6,
+      "enchantability": 9,
+      "toughness": 3.0,
+      "knockback": 0.5
+    },
+    {
+      "id": "baroque_death_helmet",
+      "source": "BaroqueBP/items/steel/knights_baroque_death_helmet.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_savoyard_helmet",
+      "model": "knights_baroque_savoyard_helmet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 6,
+      "enchantability": 9,
+      "toughness": 3.0,
+      "knockback": 0.5
+    },
+    {
+      "id": "baroque_doublet",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_doublet.json",
+      "kind": "armor",
+      "durability": 300,
+      "geometry": "geometry.knights_baroque_doublet",
+      "model": "knights_baroque_doublet",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 3,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_dutch_cap",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_dutch_cap.json",
+      "kind": "armor",
+      "durability": 2000,
+      "geometry": "geometry.knights_baroque_dutch_cap",
+      "model": "knights_baroque_dutch_cap",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 2,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_flat_cap",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_flat_cap.json",
+      "kind": "armor",
+      "durability": 2000,
+      "geometry": "geometry.knights_baroque_flat_cap",
+      "model": "knights_baroque_flat_cap",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 2,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_grilled_closed_burgonet",
+      "source": "BaroqueBP/items/steel/knights_baroque_grilled_closed_burgonet.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_grilled_closed_burgonet",
+      "model": "knights_baroque_grilled_closed_burgonet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 6,
+      "enchantability": 9,
+      "toughness": 3.0,
+      "knockback": 0.5
+    },
+    {
+      "id": "baroque_lobstertail_helmet",
+      "source": "BaroqueBP/items/steel/knights_baroque_lobstertail_helmet.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_lobstertail_helmet",
+      "model": "knights_baroque_lobstertail_helmet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 5,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_matchlock_musket",
+      "source": "BaroqueBP/items/weapon/guns/knights_baroque_matchlock_musket.json",
+      "kind": "gun",
+      "durability": 250,
+      "geometry": "geometry.knights_baroque_matchlock_musket",
+      "model": "knights_baroque_matchlock_musket",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "reload_ticks": 45
+    },
+    {
+      "id": "baroque_monmouth_cap",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_monmouth_cap.json",
+      "kind": "armor",
+      "durability": 2000,
+      "geometry": "geometry.knights_baroque_monmouth_cap",
+      "model": "knights_baroque_monmouth_cap",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 2,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_officer_armour",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_officer_armour.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_doublet",
+      "model": "knights_baroque_doublet",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 7,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0.2
+    },
+    {
+      "id": "baroque_officer_doublet",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_officer_doublet.json",
+      "kind": "armor",
+      "durability": 325,
+      "geometry": "geometry.knights_baroque_doublet",
+      "model": "knights_baroque_doublet",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 4,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_open_burgonet",
+      "source": "BaroqueBP/items/steel/knights_baroque_open_burgonet.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_open_burgonet",
+      "model": "knights_baroque_open_burgonet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 5,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_open_cloak",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_open_cloak.json",
+      "kind": "decoration",
+      "durability": 2000,
+      "geometry": "geometry.knights_baroque_cloak",
+      "model": "knights_baroque_cloak",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": true,
+      "slot": "CHESTPLATE",
+      "defense": 2,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_open_closed_burgonet",
+      "source": "BaroqueBP/items/steel/knights_baroque_open_closed_burgonet.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_grilled_closed_burgonet",
+      "model": "knights_baroque_grilled_closed_burgonet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 5,
+      "enchantability": 9,
+      "toughness": 3.0,
+      "knockback": 0.5
+    },
+    {
+      "id": "baroque_panel_cloak",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_panel_cloak.json",
+      "kind": "decoration",
+      "durability": 2000,
+      "geometry": "geometry.knights_baroque_cloak",
+      "model": "knights_baroque_cloak",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": true,
+      "slot": "CHESTPLATE",
+      "defense": 2,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_pikeman_armour",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_pikeman_armour.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_pikeman_armour",
+      "model": "knights_pikeman_armour",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 6,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0.2
+    },
+    {
+      "id": "baroque_pikeman_cuirass",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_pikeman_cuirass.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_pikeman_armour",
+      "model": "knights_pikeman_armour",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 5,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0.1
+    },
+    {
+      "id": "baroque_pikeman_pot_helmet",
+      "source": "BaroqueBP/items/steel/knights_baroque_pikeman_pot_helmet.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_pikeman_pot_helmet",
+      "model": "knights_baroque_pikeman_pot_helmet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 4,
+      "enchantability": 9,
+      "toughness": 2.0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_riders_breeches",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_riders_breeches.json",
+      "kind": "armor",
+      "durability": 2000,
+      "geometry": "geometry.knights_baroque_breeches",
+      "model": "knights_baroque_breeches",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "LEGGINGS",
+      "defense": 4,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_savoyard_helmet",
+      "source": "BaroqueBP/items/steel/knights_baroque_savoyard_helmet.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_savoyard_helmet",
+      "model": "knights_baroque_savoyard_helmet",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 6,
+      "enchantability": 9,
+      "toughness": 3.0,
+      "knockback": 0.5
+    },
+    {
+      "id": "baroque_shirt",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_shirt.json",
+      "kind": "armor",
+      "durability": 300,
+      "geometry": "geometry.knights_baroque_doublet",
+      "model": "knights_baroque_doublet",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 2,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_shoulder_sash",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_shoulder_sash.json",
+      "kind": "decoration",
+      "durability": 2000,
+      "geometry": "geometry.knights_baroque_shoulder_sash",
+      "model": "knights_baroque_shoulder_sash",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 2,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_skirt",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_skirt.json",
+      "kind": "armor",
+      "durability": 2000,
+      "geometry": "geometry.knights_baroque_skirt",
+      "model": "knights_baroque_skirt",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "LEGGINGS",
+      "defense": 1,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_skull_cap",
+      "source": "BaroqueBP/items/steel/knights_baroque_skull_cap.json",
+      "kind": "armor",
+      "durability": 500,
+      "geometry": "geometry.knights_baroque_skull_cap",
+      "model": "knights_baroque_skull_cap",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 3,
+      "enchantability": 9,
+      "toughness": 1.0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_slouch_hat",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_slouch_hat.json",
+      "kind": "armor",
+      "durability": 2000,
+      "geometry": "geometry.knights_baroque_slouch_hat",
+      "model": "knights_baroque_slouch_hat",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "HELMET",
+      "defense": 2,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_steel_cuphilt_rapier",
+      "source": "BaroqueBP/items/weapon/knights_baroque_steel_cuphilt_rapier.json",
+      "kind": "weapon",
+      "durability": 500,
+      "damage": 7,
+      "polearm": false
+    },
+    {
+      "id": "baroque_steel_halberd",
+      "source": "BaroqueBP/items/weapon/knights_baroque_steel_halberd.json",
+      "kind": "weapon",
+      "durability": 500,
+      "damage": 11,
+      "polearm": true
+    },
+    {
+      "id": "baroque_steel_partisan",
+      "source": "BaroqueBP/items/weapon/knights_baroque_steel_partisan.json",
+      "kind": "weapon",
+      "durability": 500,
+      "damage": 9,
+      "polearm": true
+    },
+    {
+      "id": "baroque_steel_pike",
+      "source": "BaroqueBP/items/weapon/knights_baroque_steel_pike.json",
+      "kind": "weapon",
+      "durability": 500,
+      "damage": 5,
+      "polearm": true
+    },
+    {
+      "id": "baroque_steel_pollax",
+      "source": "BaroqueBP/items/weapon/knights_baroque_steel_pollax.json",
+      "kind": "weapon",
+      "durability": 500,
+      "damage": 13,
+      "polearm": false
+    },
+    {
+      "id": "baroque_steel_rapier",
+      "source": "BaroqueBP/items/weapon/knights_baroque_steel_rapier.json",
+      "kind": "weapon",
+      "durability": 500,
+      "damage": 7,
+      "polearm": false
+    },
+    {
+      "id": "baroque_steel_sidesword",
+      "source": "BaroqueBP/items/weapon/knights_baroque_steel_sidesword.json",
+      "kind": "weapon",
+      "durability": 500,
+      "damage": 5,
+      "polearm": false
+    },
+    {
+      "id": "baroque_steel_swepthilt_rapier",
+      "source": "BaroqueBP/items/weapon/knights_baroque_steel_swepthilt_rapier.json",
+      "kind": "weapon",
+      "durability": 500,
+      "damage": 7,
+      "polearm": false
+    },
+    {
+      "id": "baroque_steel_walloon_sword",
+      "source": "BaroqueBP/items/weapon/knights_baroque_steel_walloon_sword.json",
+      "kind": "weapon",
+      "durability": 500,
+      "damage": 9,
+      "polearm": false
+    },
+    {
+      "id": "baroque_waist_sash",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_waist_sash.json",
+      "kind": "decoration",
+      "durability": 2000,
+      "geometry": "geometry.knights_baroque_waist_sash",
+      "model": "knights_baroque_waist_sash",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 2,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_waistcoat",
+      "source": "BaroqueBP/items/dyeable/knights_baroque_waistcoat.json",
+      "kind": "armor",
+      "durability": 300,
+      "geometry": "geometry.knights_baroque_doublet",
+      "model": "knights_baroque_doublet",
+      "dyeable": true,
+      "color": 16777215,
+      "wearable": false,
+      "slot": "CHESTPLATE",
+      "defense": 3,
+      "enchantability": 9,
+      "toughness": 0,
+      "knockback": 0
+    },
+    {
+      "id": "baroque_wheellock_pistol",
+      "source": "BaroqueBP/items/weapon/guns/knights_baroque_wheellock_pistol.json",
+      "kind": "gun",
+      "durability": 200,
+      "geometry": "geometry.knights_baroque_wheellock_pistol",
+      "model": "knights_baroque_wheellock_pistol",
+      "dyeable": false,
+      "color": 16777215,
+      "wearable": false,
+      "reload_ticks": 20
+    },
+    {
+      "id": "felt_fabric",
+      "source": "BaroqueBP/items/recipe_items/knights_felt_fabric.json",
+      "kind": "ingredient",
+      "durability": 0
+    },
+    {
+      "id": "hilt",
+      "source": "BaroqueBP/items/recipe_items/knights_hilt.json",
+      "kind": "ingredient",
+      "durability": 0
+    },
+    {
+      "id": "leather_strip",
+      "source": "BaroqueBP/items/recipe_items/knights_leather_strip.json",
+      "kind": "ingredient",
+      "durability": 0
+    },
+    {
+      "id": "paper_cartridge",
+      "source": "BaroqueBP/items/weapon/guns/bullet/knights_paper_cartridge.json",
+      "kind": "ammo",
+      "durability": 0
+    },
+    {
+      "id": "pole",
+      "source": "BaroqueBP/items/recipe_items/knights_pole.json",
+      "kind": "ingredient",
+      "durability": 0
+    },
+    {
+      "id": "small_steel_plate",
+      "source": "BaroqueBP/items/recipe_items/knights_small_steel_plate.json",
+      "kind": "ingredient",
+      "durability": 0
+    },
+    {
+      "id": "steel_ingot",
+      "source": "BaroqueBP/items/recipe_items/knights_steel_ingot.json",
+      "kind": "ingredient",
+      "durability": 0
+    },
+    {
+      "id": "steel_nugget",
+      "source": "BaroqueBP/items/recipe_items/knights_steel_nugget.json",
+      "kind": "ingredient",
+      "durability": 0
+    },
+    {
+      "id": "steel_plate",
+      "source": "BaroqueBP/items/recipe_items/knights_steel_plate.json",
+      "kind": "ingredient",
+      "durability": 0
+    },
+    {
+      "id": "wool_fibers",
+      "source": "BaroqueBP/items/recipe_items/knights_wool_fibers.json",
+      "kind": "ingredient",
+      "durability": 0
+    },
+    {
+      "id": "woollen_cloth",
+      "source": "BaroqueBP/items/recipe_items/knights_woollen_cloth.json",
+      "kind": "ingredient",
+      "durability": 0
+    }
+  ],
+  "excluded": [
+    {
+      "id": "knights:baroque_accept_oath_bohemia",
+      "reason": "Outside equipment and crafting ingredients scope"
+    },
+    {
+      "id": "knights:baroque_accept_oath_hre",
+      "reason": "Outside equipment and crafting ingredients scope"
+    },
+    {
+      "id": "knights:baroque_black_breeches",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_buff_waistcoat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_cavalier_hat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_cloak",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_coat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_dark_pikeman_armour",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_dark_pikeman_cuirass",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_doublet",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_open_cloak",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_panel_cloak",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_pikeman_armour",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_pikeman_cuirass",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_riders_breeches",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_shoulder_sash",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_slouch_hat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_black_waist_sash",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_breeches",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_buff_waistcoat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_cavalier_hat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_cloak",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_coat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_dark_pikeman_armour",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_dark_pikeman_cuirass",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_doublet",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_open_cloak",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_panel_cloak",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_pikeman_armour",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_pikeman_cuirass",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_riders_breeches",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_shoulder_sash",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_slouch_hat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_green_waist_sash",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_breeches",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_buff_waistcoat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_cavalier_hat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_cloak",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_coat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_dark_pikeman_armour",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_dark_pikeman_cuirass",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_doublet",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_open_cloak",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_panel_cloak",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_pikeman_armour",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_pikeman_cuirass",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_riders_breeches",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_shoulder_sash",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_slouch_hat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_red_waist_sash",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_refuse_oath_bohemia",
+      "reason": "Outside equipment and crafting ingredients scope"
+    },
+    {
+      "id": "knights:baroque_refuse_oath_hre",
+      "reason": "Outside equipment and crafting ingredients scope"
+    },
+    {
+      "id": "knights:baroque_yellow_breeches",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_buff_waistcoat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_cavalier_hat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_cloak",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_coat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_dark_pikeman_armour",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_dark_pikeman_cuirass",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_doublet",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_open_cloak",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_panel_cloak",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_pikeman_armour",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_pikeman_cuirass",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_riders_breeches",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_shoulder_sash",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_slouch_hat",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:baroque_yellow_waist_sash",
+      "reason": "Merged into dyeable base item"
+    },
+    {
+      "id": "knights:gold_coin",
+      "reason": "Outside equipment and crafting ingredients scope"
+    },
+    {
+      "id": "knights:gold_coin_10",
+      "reason": "Outside equipment and crafting ingredients scope"
+    },
+    {
+      "id": "knights:gold_coin_100",
+      "reason": "Outside equipment and crafting ingredients scope"
+    },
+    {
+      "id": "knights:gold_coin_1000",
+      "reason": "Outside equipment and crafting ingredients scope"
+    },
+    {
+      "id": "knights:gold_coin_5",
+      "reason": "Outside equipment and crafting ingredients scope"
+    },
+    {
+      "id": "knights:gold_coin_50",
+      "reason": "Outside equipment and crafting ingredients scope"
+    },
+    {
+      "id": "knights:gold_coin_500",
+      "reason": "Outside equipment and crafting ingredients scope"
+    },
+    {
+      "id": "knights:gold_coin_5000",
+      "reason": "Outside equipment and crafting ingredients scope"
+    }
+  ],
+  "source_repairs": [
+    "30YWBP/items/black/knights_baroque_doublet.json",
+    "30YWBP/items/green/knights_baroque_doublet.json",
+    "30YWBP/items/red/knights_baroque_doublet.json",
+    "30YWBP/items/yellow/knights_baroque_doublet.json"
+  ],
+  "notes": [
+    "No shield item definitions exist in these packs.",
+    "Unregistered resource-only shell rapier and flags are not included."
+  ]
+}

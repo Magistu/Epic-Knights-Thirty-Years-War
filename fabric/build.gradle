@@ -1,0 +1,107 @@
+import groovy.json.JsonOutput
+
+plugins {
+    id "com.github.johnrengelman.shadow" version "7.0.0"
+}
+
+loom {
+}
+
+architectury {
+    platformSetupLoomIde()
+    fabric()
+}
+
+version = rootProject.mod_version
+archivesBaseName = "epic-knights-thirty-years-war-${rootProject.display_minecraft_version}-fabric"
+
+configurations {
+    common
+    shadowCommon // Don't use shadow from the shadow plugin because we don't want IDEA to index this.
+    compileClasspath.extendsFrom common
+    runtimeClasspath.extendsFrom common
+    developmentFabric.extendsFrom common
+}
+
+repositories {
+    maven { url "https://maven.terraformersmc.com/releases/" }
+}
+
+dependencies {
+    modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
+    modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
+    // Remove the next line if you don't want to depend on the API
+
+    modApi "dev.architectury:architectury-fabric:${rootProject.architectury_version}"
+    modImplementation "me.shedaniel.cloth:cloth-config-fabric:${rootProject.cloth_config_version}"
+    modImplementation "maven.modrinth:epic-knights-shields-armor-and-weapons:${rootProject.epic_knights_version}-fabric"
+
+    common(project(path: ":common", configuration: "namedElements")) { transitive false }
+    shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
+}
+
+processResources {
+    def rawAuthors      = project.mod_authors
+    def rawContributors = project.mod_contributors
+
+    def authorsList      = rawAuthors.split(",")*.trim().findAll { it }
+    def contributorsList = rawContributors.split(",")*.trim().findAll { it }
+
+    def authorsArray      = JsonOutput.toJson(authorsList)
+    def contributorsArray = JsonOutput.toJson(contributorsList)
+
+    def expandProps = [
+            "mod_id"                    : project.mod_id,
+            "mod_name"                  : project.mod_display_name,
+            "mod_version"               : project.mod_version,
+            "mod_description"           : project.mod_description,
+            "mod_authors"               : authorsArray,
+            "mod_contributors"          : contributorsArray,
+            "mod_license"               : project.mod_license,
+            "mod_discord_url"           : project.mod_discord_url,
+            "mod_git_url"               : project.mod_git_url,
+            "mod_issues_url"            : project.mod_issues_url,
+            "mod_page_url"              : project.mod_page_url,
+            "minecraft_min_version"     : project.minecraft_min_version,
+            "minecraft_max_version"     : project.minecraft_max_version,
+            "fabric_loader_version"     : project.fabric_loader_version,
+            "architectury_api_version"  : (project.findProperty("architectury_api_version") ?: "").toString(),
+            "cloth_config_version"      : (project.findProperty("cloth_config_version") ?: "").toString(),
+            "epic_knights_version"      : (project.findProperty("epic_knights_version") ?: "").toString(),
+    ]
+
+    inputs.properties(expandProps)
+
+    filesMatching('fabric.mod.json') {
+        expand(expandProps)
+    }
+}
+
+shadowJar {
+    exclude "architectury.common.json"
+
+    configurations = [project.configurations.shadowCommon]
+    archiveClassifier.set("dev-shadow")
+}
+
+remapJar {
+    inputFile.set shadowJar.archiveFile
+    dependsOn shadowJar
+    archiveClassifier.set(null)
+}
+
+jar {
+    archiveClassifier.set("dev")
+}
+
+sourcesJar {
+    def commonSources = project(":common").sourcesJar
+    dependsOn commonSources
+    from commonSources.archiveFile.map { zipTree(it) }
+}
+
+components.java {
+    withVariantsFromConfiguration(project.configurations.shadowRuntimeElements) {
+        skip()
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_coat",
+    "count": 1
+  },
+  "pattern": [
+    "ABA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:felt_fabric"
+    },
+    "B": {
+      "item": "thirtyyearswar:baroque_shirt"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_flat_cap",
+    "count": 1
+  },
+  "pattern": [
+    "AAA",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:felt_fabric"
+    }
+  }
+}

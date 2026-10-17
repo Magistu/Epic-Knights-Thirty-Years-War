@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_skull_cap",
+    "count": 1
+  },
+  "pattern": [
+    "BAB",
+    "BCB"
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:steel_ingot"
+    },
+    "B": {
+      "item": "thirtyyearswar:steel_plate"
+    },
+    "C": {
+      "item": "thirtyyearswar:woollen_cloth"
+    }
+  }
+}

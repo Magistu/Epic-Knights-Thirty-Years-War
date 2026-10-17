@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_doublet",
+    "count": 1
+  },
+  "pattern": [
+    " B ",
+    "BAB",
+    " B "
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:baroque_coat"
+    },
+    "B": {
+      "item": "thirtyyearswar:woollen_cloth"
+    }
+  }
+}

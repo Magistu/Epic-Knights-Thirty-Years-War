@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_matchlock_musket",
+    "count": 1
+  },
+  "pattern": [
+    "CB ",
+    "AAA",
+    "DD "
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:steel_ingot"
+    },
+    "B": {
+      "item": "minecraft:string"
+    },
+    "C": {
+      "item": "thirtyyearswar:steel_nugget"
+    },
+    "D": {
+      "item": "minecraft:oak_planks"
+    }
+  }
+}

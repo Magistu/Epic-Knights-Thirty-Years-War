@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_cuirass",
+    "count": 1
+  },
+  "pattern": [
+    "A A",
+    "AAA",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:steel_ingot"
+    }
+  }
+}

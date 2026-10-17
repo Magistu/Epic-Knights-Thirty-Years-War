@@ -1,0 +1,34 @@
+{
+  "parent": "builtin/entity",
+  "textures": {
+    "particle": "thirtyyearswar:item/baroque_wheellock_pistol"
+  },
+  "display": {
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        45
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    "ground": {
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "fixed": {
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    }
+  }
+}

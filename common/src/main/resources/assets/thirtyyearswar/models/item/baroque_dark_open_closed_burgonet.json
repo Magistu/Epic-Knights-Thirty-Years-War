@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "thirtyyearswar:item/baroque_dark_open_closed_burgonet"
+  }
+}

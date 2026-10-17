@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:steel_nugget",
+    "count": 9
+  },
+  "pattern": [
+    "B"
+  ],
+  "key": {
+    "B": {
+      "item": "thirtyyearswar:steel_ingot"
+    }
+  }
+}

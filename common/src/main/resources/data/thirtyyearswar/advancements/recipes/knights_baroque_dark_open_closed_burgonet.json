@@ -1,0 +1,27 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "ingredient_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "thirtyyearswar:baroque_open_closed_burgonet"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ingredient_0"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "thirtyyearswar:knights_baroque_dark_open_closed_burgonet"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "knights.musket.shoot": {
+    "sounds": [
+      {
+        "name": "thirtyyearswar:musket/musket_shot1"
+      },
+      {
+        "name": "thirtyyearswar:musket/musket_shot2"
+      },
+      {
+        "name": "thirtyyearswar:musket/musket_shot3"
+      }
+    ]
+  },
+  "gunshot": {
+    "sounds": [
+      {
+        "name": "thirtyyearswar:musket/musket_shot1"
+      },
+      {
+        "name": "thirtyyearswar:musket/musket_shot2"
+      },
+      {
+        "name": "thirtyyearswar:musket/musket_shot3"
+      }
+    ]
+  }
+}
