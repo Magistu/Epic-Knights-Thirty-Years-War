@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_steel_rapier",
+    "count": 1
+  },
+  "pattern": [
+    "CB",
+    "DC"
+  ],
+  "key": {
+    "B": {
+      "tag": "c:steel_plates"
+    },
+    "C": {
+      "tag": "c:steel_nuggets"
+    },
+    "D": {
+      "item": "thirtyyearswar:baroque_steel_sidesword"
+    }
+  }
+}

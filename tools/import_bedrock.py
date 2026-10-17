@@ -3,6 +3,7 @@
 import argparse, copy, json, math, re, shutil
 from pathlib import Path
 from PIL import Image
+from recipe_materials import REUSED, material_tags, FORGE_VANILLA
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT/'common/src/main/resources/assets/thirtyyearswar'
 JAVA = ROOT/'common/src/main/java/com/magistuarmory/thirtyyearswar'
@@ -101,17 +102,22 @@ def atlas(g,texture):
     return g,im
 
 
-def recipes(source,catalog):
+def recipes(source,catalog,loader):
     available={e['id'] for e in catalog}; written=set()
-    replacements={}
+    replacements=material_tags(loader)
     def ingredient(v):
         item=v['item'].lower();id=item.split(':')[-1]
         if item.startswith('knights:'):
-            item='thirtyyearswar:'+id if id in available else replacements[id]
-        elif item=='minecraft:wool':item='minecraft:white_wool'
+            if id in replacements:return {'tag':replacements[id]}
+            if id not in available:raise ValueError('Unknown ingredient '+item)
+            item='thirtyyearswar:'+id
+        elif item=='minecraft:wool':return {'tag':'minecraft:wool'}
+        elif item=='minecraft:oak_planks':return {'tag':'minecraft:planks'}
+        elif item=='minecraft:iron_nugget':return {'tag':'c:iron_nuggets' if loader=='fabric' else 'forge:nuggets/iron'}
         elif item=='minecraft:dye':item='minecraft:black_dye'
+        if loader=='forge' and item in FORGE_VANILLA:return {'tag':FORGE_VANILLA[item]}
         return {'item':item}
-    folder=ROOT/'common/src/main/resources/data/thirtyyearswar/recipes'
+    folder=ROOT/f'{loader}/src/main/resources/data/thirtyyearswar/recipes'
     for p in sorted((source/'BaroqueBP/recipes').rglob('*.json')):
         raw=read(p)
         for key,d in raw.items():
@@ -141,13 +147,9 @@ def recipes(source,catalog):
     for path in folder.glob('*.json'):
         recipe=read(path)
         ingredients=list(recipe.get('key',{}).values())+recipe.get('ingredients',[])+([recipe['ingredient']] if 'ingredient' in recipe else [])
-        criteria={f'ingredient_{i}':{'trigger':'minecraft:inventory_changed','conditions':{'items':[{'items':[v['item']]}]}} for i,v in enumerate(ingredients)}
-        write(ROOT/f'common/src/main/resources/data/thirtyyearswar/advancements/recipes/{path.stem}.json',{'parent':'minecraft:recipes/root','criteria':criteria,'requirements':[list(criteria)],'rewards':{'recipes':['thirtyyearswar:'+path.stem]}})
-    for namespace,tag in [('forge','ingots/steel'),('c','ingots/steel'),('c','steel_ingots')]:
-        write(ROOT/f'common/src/main/resources/data/{namespace}/tags/items/{tag}.json',{'replace':False,'values':['thirtyyearswar:steel_ingot']})
-    for namespace,tag in [('forge','nuggets/steel'),('c','nuggets/steel'),('c','steel_nuggets')]:
-        write(ROOT/f'common/src/main/resources/data/{namespace}/tags/items/{tag}.json',{'replace':False,'values':['thirtyyearswar:steel_nugget']})
-    write(ROOT/'docs/recipe-report.json',{'crafted':sorted(written),'without_recipe':sorted(available-written),'material_substitutions':replacements,'recipe_repairs':['Cup-hilt and swept-hilt rapier upgrades use the base rapier instead of requiring their own output.']})
+        criteria={f'ingredient_{i}':{'trigger':'minecraft:inventory_changed','conditions':{'items':[({'tag':v['tag']} if 'tag' in v else {'items':[v['item']]})]}} for i,v in enumerate(ingredients)}
+        write(ROOT/f'{loader}/src/main/resources/data/thirtyyearswar/advancements/recipes/{path.stem}.json',{'parent':'minecraft:recipes/root','criteria':criteria,'requirements':[list(criteria)],'rewards':{'recipes':['thirtyyearswar:'+path.stem]}})
+    write(ROOT/f'docs/recipe-report-{loader}.json',{'crafted':sorted(written),'without_recipe':sorted(available-written),'material_substitutions':replacements,'recipe_repairs':['Cup-hilt and swept-hilt rapier upgrades use the base rapier instead of requiring their own output.']})
 
 def main(source):
     old=ROOT/'docs/import-report.json'
@@ -157,7 +159,15 @@ def main(source):
             for folder in ['models/item','textures/item','textures/models/armor']:
                 for path in (ASSETS/folder).glob(id+'.*'):path.unlink()
                 for path in (ASSETS/folder).glob(id+'_*.png'):path.unlink()
-    for path in (ROOT/'common/src/main/resources/data/thirtyyearswar/recipes').glob('*.json'):path.unlink()
+    # These directories contain only importer-owned recipes and unlocks.
+    for loader in ['common','fabric','forge']:
+        for sub in ['recipes','advancements/recipes']:
+            for path in (ROOT/f'{loader}/src/main/resources/data/thirtyyearswar/{sub}').glob('*.json'):path.unlink()
+    # Remove obsolete duplicate material tags from earlier imports.
+    for namespace, tags in [('c',['ingots/steel','steel_ingots','nuggets/steel','steel_nuggets']), ('forge',['ingots/steel','nuggets/steel'])]:
+        for tag in tags:
+            (ROOT/f'common/src/main/resources/data/{namespace}/tags/items/{tag}.json').unlink(missing_ok=True)
+    (ROOT/'docs/recipe-report.json').unlink(missing_ok=True)
     (ASSETS/'equipment.json').unlink(missing_ok=True)
     attaches={};geos={};icons={};items={};excluded=[];catalog=[];methods={};lang={}
     for pack in ['Baroque','30YW']:
@@ -174,6 +184,8 @@ def main(source):
             d=read(p)['minecraft:item'];items[d['description']['identifier']]=(d,p)
     for source_id,(d,p) in sorted(items.items()):
         c=d['components'];id=source_id.split(':')[1];wear=c.get('minecraft:wearable');kind=''
+        if id in REUSED:
+            excluded.append({'id':source_id,'reason':'Uses Epic Knights ingredient and loader-specific tags'});continue
         if any(id.startswith('baroque_'+color+'_') for color in ['black','red','green','yellow']):
             excluded.append({'id':source_id,'reason':'Merged into dyeable base item'});continue
         if wear:kind='decoration' if any(x in id for x in ['cloak','sash']) else 'armor'
@@ -233,7 +245,7 @@ def main(source):
     # The catalog is audit metadata only. Runtime items/configs are explicit Java declarations.
     lang.update({'death.attack.thirtyyearswar.bullet':'%1$s was shot by %2$s','death.attack.thirtyyearswar.bullet.item':'%1$s was shot by %2$s using %3$s'})
     write(ASSETS/'lang/en_us.json',lang)
-    recipes(source,catalog)
+    for loader in ['fabric','forge']:recipes(source,catalog,loader)
     write(ROOT/'docs/import-report.json',{'source_packs':['Baroque','30YW'],'items':catalog,'excluded':excluded,'source_repairs':[str(Path(x).relative_to(source)) for x in REPAIRS],'notes':['No shield item definitions exist in these packs.','Unregistered resource-only shell rapier and flags are not included.']})
     methods_text='\n\n'.join(f'    public static LayerDefinition {n}() {{\n        {body}\n    }}' for n,body in sorted(methods.items()))
     write(JAVA/'client/EquipmentGeometry.java','''package com.magistuarmory.thirtyyearswar.client;

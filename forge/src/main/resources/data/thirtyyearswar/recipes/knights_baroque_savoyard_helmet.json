@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_savoyard_helmet",
+    "count": 1
+  },
+  "pattern": [
+    " B ",
+    "BDB",
+    " B "
+  ],
+  "key": {
+    "B": {
+      "tag": "forge:plates/steel"
+    },
+    "D": {
+      "item": "thirtyyearswar:baroque_open_closed_burgonet"
+    }
+  }
+}

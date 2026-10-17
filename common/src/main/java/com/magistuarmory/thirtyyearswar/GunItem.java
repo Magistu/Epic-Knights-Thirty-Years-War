@@ -47,7 +47,7 @@ public class GunItem extends Item {
     @Override public int getUseDuration(ItemStack stack) { return 72000; }
     @Override public UseAnim getUseAnimation(ItemStack stack) { return UseAnim.BOW; }
     @Override public boolean isValidRepairItem(ItemStack stack, ItemStack ingredient) {
-        return ingredient.is(AddonItems.STEEL_INGOT.get()) || super.isValidRepairItem(stack, ingredient);
+        return ingredient.is(com.magistuarmory.item.ModItems.STEEL_INGOT.get()) || super.isValidRepairItem(stack, ingredient);
     }
     @Override public void releaseUsing(ItemStack stack, Level level, LivingEntity user, int remaining) {
         if (!(level instanceof ServerLevel server) || !(user instanceof Player player)

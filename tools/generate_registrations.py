@@ -1,5 +1,6 @@
 """Generate ordinary, explicit addon Java source from import audit records (never read at runtime)."""
 from pathlib import Path
+from balance_defaults import ARMOR_DEFAULTS, WEAPON_DEFAULTS
 ROOT=Path(__file__).resolve().parents[1]
 JAVA=ROOT/'common/src/main/java/com/magistuarmory/thirtyyearswar'
 def write(path,text):
@@ -15,11 +16,9 @@ def generate(items):
         for e in entries:
             id=e['id']
             if typ=='ArmorTypeConfig':
-                slot={'BOOTS':0,'LEGGINGS':1,'CHESTPLATE':2,'HELMET':3}[e['slot']];dur=[0]*4;defense=[0]*4;dur[slot]=e['durability'];defense[slot]=e['defense']
-                value=f'ArmorTypeConfig.of({f(e["toughness"])}, {f(e["knockback"])}, new Integer[] {{{", ".join(map(str,dur))}}}, new Integer[] {{{", ".join(map(str,defense))}}}, {e["enchantability"]}, true)'
+                value=ARMOR_DEFAULTS[id]
             elif typ=='WeaponType':
-                pole=e['polearm'];speed=1 if pole else 1.6
-                value=f'WeaponType.of({f(max(0,e["damage"]-3))}, {f(speed)}, {f(2.5 if id.endswith("pike") else 1.5 if pole else .5)}, 0.0F, {f(3 if pole else 1.5)}, 0, true, {2 if pole else 0}, {f(8 if pole else 5)}, true, false, {str(id.endswith("halberd")).lower()})'
+                value=WEAPON_DEFAULTS[id]
             else:value='new DyeSettings()'
             lines.append(f'        values.put("{id}", {value});')
         imports={'ArmorTypeConfig':'import com.magistuarmory.config.ArmorConfig.ArmorTypeConfig;','WeaponType':'import com.magistuarmory.item.WeaponType;','DyeSettings':''}[typ]
@@ -58,7 +57,9 @@ public final class {cls} implements ConfigData {{
 {extra}}}
 ''')
     mats=[]
-    for e in armor:mats.append(f'    public static final ArmorType {e["id"].upper()} = create("{e["id"]}", "{e["model"]}", {str(e["dyeable"]).lower()});')
+    for e in armor:
+        material = 'Items.LEATHER' if 'buff_' in e['id'] else 'AddonItems.WOOLLEN_CLOTH.get()' if e.get('toughness',0) == 0 else 'com.magistuarmory.item.ModItems.STEEL_INGOT.get()'
+        mats.append(f'    public static final ArmorType {e["id"].upper()} = create("{e["id"]}", "{e["model"]}", {str(e["dyeable"]).lower()}, () -> Ingredient.of({material}));')
     write(Path('item/armor/AddonArmorTypes.java'),'''package com.magistuarmory.thirtyyearswar.item.armor;
 
 import com.magistuarmory.thirtyyearswar.ThirtyYearsWar;
@@ -70,14 +71,14 @@ import net.minecraft.world.item.Items;
 
 public final class AddonArmorTypes {
 '''+ '\n'.join(mats)+'''
-    private static ArmorType create(String name, String model, boolean dyeable) {
+    private static ArmorType create(String name, String model, boolean dyeable, java.util.function.Supplier<Ingredient> repairIngredient) {
         var c = ThirtyYearsWar.CONFIG.armor.get(name);
         boolean enabled = c.enabled && (!dyeable || ThirtyYearsWar.CONFIG.decorations.get(name).enabled);
         return new ArmorType(ThirtyYearsWar.id(name), ThirtyYearsWar.id(model), c.toughness, c.knockbackResistance,
                 new Integer[] {c.bootsDurability, c.leggingsDurability, c.chestplateDurability, c.helmetDurability},
                 new Integer[] {c.bootsDefense, c.leggingsDefense, c.chestplateDefense, c.helmetDefense},
                 c.enchantmentValue, dyeable ? SoundEvents.ARMOR_EQUIP_LEATHER : SoundEvents.ARMOR_EQUIP_IRON, enabled,
-                () -> Ingredient.of(dyeable ? AddonItems.WOOLLEN_CLOTH.get() : AddonItems.STEEL_INGOT.get()));
+                repairIngredient);
     }
 }
 ''')

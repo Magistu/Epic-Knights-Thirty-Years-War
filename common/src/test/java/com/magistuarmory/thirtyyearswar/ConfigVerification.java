@@ -11,6 +11,15 @@ public final class ConfigVerification {
         if (armor.get("baroque_cloak").chestplateDefense != 7 || armor.get("baroque_cloak").enabled)
             throw new AssertionError("Armor override not retained");
         if (!armor.get("baroque_closed_helmet").enabled) throw new AssertionError("Missing armor default not restored");
+        ArmorConfig defaults = new ArmorConfig();
+        var helmet = defaults.get("baroque_closed_helmet");
+        if (helmet.helmetDefense != 3 || helmet.helmetDurability != 275 || helmet.toughness != 1.25F)
+            throw new AssertionError("Close helmet differs from Epic Knights Addon profile");
+        var doublet = defaults.get("baroque_doublet");
+        if (doublet.chestplateDefense != 1 || doublet.chestplateDurability != 120 || doublet.toughness != 0)
+            throw new AssertionError("Cloth defaults are overpowered");
+        if (!gson.toJson(defaults.get("baroque_cuirassier_armour")).equals(gson.toJson(defaults.get("baroque_dark_cuirassier_armour"))))
+            throw new AssertionError("Dark finish has different protection");
         WeaponsConfig weapons = gson.fromJson("{\"meleeWeapons\":{}}", WeaponsConfig.class);
         if (gson.toJsonTree(weapons.get("baroque_steel_pike")).getAsJsonObject().get("twoHanded").getAsInt() != 2) throw new AssertionError("Missing weapon default not restored");
         DecorationsConfig dyes = gson.fromJson("{\"decorations\":{\"baroque_cloak\":{\"defaultColor\":16711680,\"enabled\":false}}}", DecorationsConfig.class);

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_cuirassier_armour",
+    "count": 1
+  },
+  "pattern": [
+    "ACA",
+    "ABA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "tag": "c:steel_ingots"
+    },
+    "B": {
+      "item": "thirtyyearswar:baroque_buff_waistcoat"
+    },
+    "C": {
+      "item": "thirtyyearswar:baroque_armour"
+    }
+  }
+}

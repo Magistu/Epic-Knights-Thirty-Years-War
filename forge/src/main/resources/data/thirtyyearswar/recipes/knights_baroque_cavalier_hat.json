@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_cavalier_hat",
+    "count": 1
+  },
+  "pattern": [
+    " BB",
+    "CAB"
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:baroque_slouch_hat"
+    },
+    "B": {
+      "tag": "forge:feathers"
+    },
+    "C": {
+      "tag": "forge:dyes/black"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:paper_cartridge",
+    "count": 2
+  },
+  "pattern": [
+    "AC ",
+    "CB "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:paper"
+    },
+    "B": {
+      "tag": "forge:gunpowder"
+    },
+    "C": {
+      "tag": "forge:nuggets/iron"
+    }
+  }
+}

@@ -12,15 +12,18 @@ Fabric also requires Fabric API. The example Epic Knights: Addon is not required
   normal decoration crafting workflow.
 - Two dyeable sash decorations for chest armor.
 - Nine Epic Knights steel melee weapons and two functional firearms.
-- Paper cartridges and all ten source crafting ingredients: steel ingot, steel
-  nugget, steel plate, small steel plate, leather strip, hilt, pole, wool fibers,
-  woollen cloth and felt fabric.
+- Paper cartridges and three unique source ingredients: wool fibers, woollen cloth and felt fabric.
+- Reuses Epic Knights' hilt, leather strip, pole, small steel plate, steel ingot,
+  steel nugget and steel plate, without duplicate registrations.
 
-All **81 items are obtainable in survival** through crafting/smelting chains that
-start with vanilla materials. Recipes retain the original ingredients rather than
-replacing them with vanilla substitutes. Recipe-book unlocks are included.
-The two source rapier recipes that required their own output now upgrade the base
-rapier. Steel ingredients are also in the common Fabric/Forge steel tags.
+All **74 items are obtainable in survival** through crafting/smelting chains and
+Epic Knights materials. Recipe-book unlocks are included. The two source rapier
+recipes that required their own output now upgrade the base rapier.
+Recipes live in each loader's resources: Fabric uses `c:steel_ingots`,
+`c:steel_nuggets`, `c:steel_plates`; Forge uses `forge:ingots/steel`,
+`forge:nuggets/steel`, `forge:plates/steel`. Component tags use Epic Knights'
+shared namespace. Wool and planks accept their vanilla tags, and iron nuggets
+use loader-specific tags. Exact equipment upgrades retain item ingredients.
 
 There is no addon creative tab. Armor and wearable cloaks are in Epic Knights'
 Armor tab, weapons and guns in its Particular Weapons tab, and cloaks/sashes in
@@ -56,6 +59,16 @@ Like the example addon, AutoConfig uses partitioned JSON5 configuration under
 - `guns.json5`: enabled state, durability, reload time, cooldown, damage, range and
   dispersion for each firearm.
 
+Armor and melee defaults follow the reference addon's matching profiles; see
+[the full mapping](docs/balance.md). Cloth now has 100–140 durability for body/leg
+pieces, hats 100, steel helmets 170–275, and metal chest armor 315–368. Dark metal
+finishes have the same stats as plain metal. The pike uses partisan balance with
+longer reach and mandatory two-handed use.
+
+Existing saved configs retain their values. To use the rebalanced defaults, back
+up and remove `armors.json5` and `weapons.json5`, then restart. Earlier prototype
+stacks of the seven removed duplicate ingredients are not migrated automatically.
+
 Restart after editing. Missing entries in older/partial configs fall back to the
 built-in defaults. Use matching configs on clients and servers. Disabling an item
 prevents its registration, following the example addon's behavior; recipes for
@@ -67,7 +80,7 @@ stable material IDs.
 Hold use to load and aim; release after a full charge to fire. Early release
 consumes neither ammunition nor durability. A survival shot consumes one paper
 cartridge and one durability. Creative mode needs no ammunition. Guns repair with
-this addon's steel ingots.
+Epic Knights' steel ingots.
 
 Defaults: musket 45-tick charge, 24 damage, 80-block range and 250 durability;
 pistol 20-tick charge, 14 damage, 40-block range and 200 durability. Both use
@@ -102,10 +115,11 @@ checks.
 registration/config defaults from the supplied packs (Pillow required). The Java
 runtime never reads those source packs or the audit reports. Building requires
 neither Pillow nor the Bedrock packs. Hand edits to generated registration/default
-files should also be applied to `tools/generate_registrations.py`.
+files should also be applied to `tools/generate_registrations.py` or the frozen
+reference profiles in `tools/balance_defaults.py`.
 
 `docs/import-report.json` records included, merged and excluded definitions;
-`docs/recipe-report.json` records recipe coverage and repairs. Bedrock comments,
+`docs/recipe-report-fabric.json` and `docs/recipe-report-forge.json` records recipe coverage and repairs. Bedrock comments,
 malformed doublet definitions, mislabeled attachables, texture alpha masks and
 recipe defects are normalized without modifying the original packs. Chest-armor
 tassets follow the torso to remain visible under Java's chest-slot rendering rules.

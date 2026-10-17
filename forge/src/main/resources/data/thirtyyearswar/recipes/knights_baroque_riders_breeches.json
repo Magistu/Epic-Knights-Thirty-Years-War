@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_riders_breeches",
+    "count": 1
+  },
+  "pattern": [
+    "AAA",
+    "B B",
+    "B B"
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:felt_fabric"
+    },
+    "B": {
+      "tag": "forge:leather"
+    }
+  }
+}

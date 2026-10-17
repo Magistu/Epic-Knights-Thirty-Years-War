@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_monmouth_cap",
+    "count": 1
+  },
+  "pattern": [
+    " A ",
+    "AAA",
+    "A A"
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:felt_fabric"
+    }
+  }
+}

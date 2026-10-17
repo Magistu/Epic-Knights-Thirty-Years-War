@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_cavalry_armour_gauntlet",
+    "count": 1
+  },
+  "pattern": [
+    "AB",
+    " B"
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:baroque_cavalry_armour"
+    },
+    "B": {
+      "tag": "c:steel_plates"
+    }
+  }
+}

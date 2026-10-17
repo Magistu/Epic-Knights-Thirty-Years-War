@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_armour",
+    "count": 1
+  },
+  "pattern": [
+    "BAB"
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:baroque_cuirass"
+    },
+    "B": {
+      "tag": "forge:plates/steel"
+    }
+  }
+}

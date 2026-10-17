@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_steel_pike",
+    "count": 1
+  },
+  "pattern": [
+    " CB",
+    " DC",
+    "D  "
+  ],
+  "key": {
+    "B": {
+      "tag": "c:steel_plates"
+    },
+    "C": {
+      "tag": "c:steel_nuggets"
+    },
+    "D": {
+      "tag": "magistuarmory:poles"
+    }
+  }
+}

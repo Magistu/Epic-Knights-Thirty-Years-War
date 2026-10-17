@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_buff_waistcoat",
+    "count": 1
+  },
+  "pattern": [
+    "BBB",
+    " A ",
+    " B "
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:baroque_coat"
+    },
+    "B": {
+      "tag": "forge:leather"
+    }
+  }
+}

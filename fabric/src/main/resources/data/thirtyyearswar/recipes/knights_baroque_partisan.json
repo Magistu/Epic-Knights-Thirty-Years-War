@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_steel_partisan",
+    "count": 1
+  },
+  "pattern": [
+    " BC",
+    " DB",
+    "E  "
+  ],
+  "key": {
+    "B": {
+      "tag": "c:steel_ingots"
+    },
+    "C": {
+      "tag": "c:steel_nuggets"
+    },
+    "D": {
+      "tag": "magistuarmory:poles"
+    },
+    "E": {
+      "tag": "magistuarmory:hilts"
+    }
+  }
+}

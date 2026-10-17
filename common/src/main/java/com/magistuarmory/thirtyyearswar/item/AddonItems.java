@@ -88,14 +88,7 @@ public final class AddonItems extends ModItemsProvider {
     public static final RegistrySupplier<MedievalArmorItem> BAROQUE_WAISTCOAT = INSTANCE.addDyeableMedievalArmorItem("baroque_waistcoat", AddonArmorTypes.BAROQUE_WAISTCOAT, ArmorItem.Type.CHESTPLATE, new Item.Properties(), CONFIG.decorations.get("baroque_waistcoat").defaultColor);
     public static final RegistrySupplier<Item> BAROQUE_WHEELLOCK_PISTOL = INSTANCE.addGun("baroque_wheellock_pistol", CONFIG.guns.get("baroque_wheellock_pistol"));
     public static final RegistrySupplier<Item> FELT_FABRIC = INSTANCE.addIngredientItem("felt_fabric", () -> new Item(new Item.Properties()));
-    public static final RegistrySupplier<Item> HILT = INSTANCE.addIngredientItem("hilt", () -> new Item(new Item.Properties()));
-    public static final RegistrySupplier<Item> LEATHER_STRIP = INSTANCE.addIngredientItem("leather_strip", () -> new Item(new Item.Properties()));
     public static final RegistrySupplier<Item> PAPER_CARTRIDGE = INSTANCE.addIngredientItem("paper_cartridge", () -> new Item(new Item.Properties()));
-    public static final RegistrySupplier<Item> POLE = INSTANCE.addIngredientItem("pole", () -> new Item(new Item.Properties()));
-    public static final RegistrySupplier<Item> SMALL_STEEL_PLATE = INSTANCE.addIngredientItem("small_steel_plate", () -> new Item(new Item.Properties()));
-    public static final RegistrySupplier<Item> STEEL_INGOT = INSTANCE.addIngredientItem("steel_ingot", () -> new Item(new Item.Properties()));
-    public static final RegistrySupplier<Item> STEEL_NUGGET = INSTANCE.addIngredientItem("steel_nugget", () -> new Item(new Item.Properties()));
-    public static final RegistrySupplier<Item> STEEL_PLATE = INSTANCE.addIngredientItem("steel_plate", () -> new Item(new Item.Properties()));
     public static final RegistrySupplier<Item> WOOL_FIBERS = INSTANCE.addIngredientItem("wool_fibers", () -> new Item(new Item.Properties()));
     public static final RegistrySupplier<Item> WOOLLEN_CLOTH = INSTANCE.addIngredientItem("woollen_cloth", () -> new Item(new Item.Properties()));
 

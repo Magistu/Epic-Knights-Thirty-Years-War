@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_barred_lobstertail_helmet",
+    "count": 1
+  },
+  "pattern": [
+    "CB"
+  ],
+  "key": {
+    "B": {
+      "tag": "c:steel_plates"
+    },
+    "C": {
+      "item": "thirtyyearswar:baroque_lobstertail_helmet"
+    }
+  }
+}

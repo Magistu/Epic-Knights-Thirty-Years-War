@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_cabasset_helmet",
+    "count": 1
+  },
+  "pattern": [
+    " B ",
+    "CDC"
+  ],
+  "key": {
+    "B": {
+      "tag": "c:steel_plates"
+    },
+    "C": {
+      "tag": "magistuarmory:small_plates/steel"
+    },
+    "D": {
+      "item": "thirtyyearswar:baroque_skull_cap"
+    }
+  }
+}

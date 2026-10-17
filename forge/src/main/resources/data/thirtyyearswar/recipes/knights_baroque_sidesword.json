@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_steel_sidesword",
+    "count": 1
+  },
+  "pattern": [
+    "  B",
+    "CB ",
+    "EC "
+  ],
+  "key": {
+    "B": {
+      "tag": "forge:plates/steel"
+    },
+    "C": {
+      "tag": "forge:nuggets/steel"
+    },
+    "E": {
+      "tag": "magistuarmory:hilts"
+    }
+  }
+}

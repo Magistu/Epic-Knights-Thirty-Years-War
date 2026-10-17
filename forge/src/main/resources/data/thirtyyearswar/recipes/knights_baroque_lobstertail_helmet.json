@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_lobstertail_helmet",
+    "count": 1
+  },
+  "pattern": [
+    " CB",
+    "BB "
+  ],
+  "key": {
+    "B": {
+      "tag": "forge:plates/steel"
+    },
+    "C": {
+      "item": "thirtyyearswar:baroque_skull_cap"
+    }
+  }
+}

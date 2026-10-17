@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_closed_helmet",
+    "count": 1
+  },
+  "pattern": [
+    "BBB",
+    "BDB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "tag": "c:steel_plates"
+    },
+    "D": {
+      "item": "thirtyyearswar:baroque_skull_cap"
+    }
+  }
+}

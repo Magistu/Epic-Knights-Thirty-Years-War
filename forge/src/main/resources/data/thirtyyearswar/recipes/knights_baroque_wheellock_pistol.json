@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_wheellock_pistol",
+    "count": 1
+  },
+  "pattern": [
+    " B ",
+    "DAA",
+    "C  "
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:ingots/steel"
+    },
+    "B": {
+      "tag": "forge:nuggets/iron"
+    },
+    "C": {
+      "tag": "forge:nuggets/steel"
+    },
+    "D": {
+      "tag": "minecraft:planks"
+    }
+  }
+}

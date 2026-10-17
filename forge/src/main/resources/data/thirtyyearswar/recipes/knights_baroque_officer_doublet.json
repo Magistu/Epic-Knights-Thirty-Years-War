@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_officer_doublet",
+    "count": 1
+  },
+  "pattern": [
+    " B ",
+    "BAB",
+    " B "
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:baroque_buff_waistcoat"
+    },
+    "B": {
+      "tag": "forge:dyes/red"
+    }
+  }
+}

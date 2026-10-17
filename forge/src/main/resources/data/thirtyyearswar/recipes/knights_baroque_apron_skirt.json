@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_apron_skirt",
+    "count": 1
+  },
+  "pattern": [
+    "CCC",
+    "ABA",
+    "ABA"
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:felt_fabric"
+    },
+    "B": {
+      "item": "thirtyyearswar:woollen_cloth"
+    },
+    "C": {
+      "tag": "forge:leather"
+    }
+  }
+}

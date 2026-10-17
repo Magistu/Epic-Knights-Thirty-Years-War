@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_officer_armour",
+    "count": 1
+  },
+  "pattern": [
+    "A",
+    "B"
+  ],
+  "key": {
+    "A": {
+      "item": "thirtyyearswar:baroque_cuirass"
+    },
+    "B": {
+      "item": "thirtyyearswar:baroque_officer_doublet"
+    }
+  }
+}

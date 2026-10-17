@@ -1051,51 +1051,9 @@
       "durability": 0
     },
     {
-      "id": "hilt",
-      "source": "BaroqueBP/items/recipe_items/knights_hilt.json",
-      "kind": "ingredient",
-      "durability": 0
-    },
-    {
-      "id": "leather_strip",
-      "source": "BaroqueBP/items/recipe_items/knights_leather_strip.json",
-      "kind": "ingredient",
-      "durability": 0
-    },
-    {
       "id": "paper_cartridge",
       "source": "BaroqueBP/items/weapon/guns/bullet/knights_paper_cartridge.json",
       "kind": "ammo",
-      "durability": 0
-    },
-    {
-      "id": "pole",
-      "source": "BaroqueBP/items/recipe_items/knights_pole.json",
-      "kind": "ingredient",
-      "durability": 0
-    },
-    {
-      "id": "small_steel_plate",
-      "source": "BaroqueBP/items/recipe_items/knights_small_steel_plate.json",
-      "kind": "ingredient",
-      "durability": 0
-    },
-    {
-      "id": "steel_ingot",
-      "source": "BaroqueBP/items/recipe_items/knights_steel_ingot.json",
-      "kind": "ingredient",
-      "durability": 0
-    },
-    {
-      "id": "steel_nugget",
-      "source": "BaroqueBP/items/recipe_items/knights_steel_nugget.json",
-      "kind": "ingredient",
-      "durability": 0
-    },
-    {
-      "id": "steel_plate",
-      "source": "BaroqueBP/items/recipe_items/knights_steel_plate.json",
-      "kind": "ingredient",
       "durability": 0
     },
     {
@@ -1415,6 +1373,34 @@
     {
       "id": "knights:gold_coin_5000",
       "reason": "Outside equipment and crafting ingredients scope"
+    },
+    {
+      "id": "knights:hilt",
+      "reason": "Uses Epic Knights ingredient and loader-specific tags"
+    },
+    {
+      "id": "knights:leather_strip",
+      "reason": "Uses Epic Knights ingredient and loader-specific tags"
+    },
+    {
+      "id": "knights:pole",
+      "reason": "Uses Epic Knights ingredient and loader-specific tags"
+    },
+    {
+      "id": "knights:small_steel_plate",
+      "reason": "Uses Epic Knights ingredient and loader-specific tags"
+    },
+    {
+      "id": "knights:steel_ingot",
+      "reason": "Uses Epic Knights ingredient and loader-specific tags"
+    },
+    {
+      "id": "knights:steel_nugget",
+      "reason": "Uses Epic Knights ingredient and loader-specific tags"
+    },
+    {
+      "id": "knights:steel_plate",
+      "reason": "Uses Epic Knights ingredient and loader-specific tags"
     }
   ],
   "source_repairs": [

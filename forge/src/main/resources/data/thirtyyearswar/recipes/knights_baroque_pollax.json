@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "result": {
+    "item": "thirtyyearswar:baroque_steel_pollax",
+    "count": 1
+  },
+  "pattern": [
+    " C ",
+    "BDB",
+    " E "
+  ],
+  "key": {
+    "B": {
+      "tag": "forge:ingots/steel"
+    },
+    "C": {
+      "tag": "forge:plates/steel"
+    },
+    "D": {
+      "tag": "magistuarmory:poles"
+    },
+    "E": {
+      "tag": "magistuarmory:hilts"
+    }
+  }
+}
