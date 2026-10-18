@@ -7,8 +7,7 @@
   },
   "pattern": [
     "AAA",
-    "B B",
-    "C C"
+    "B B"
   ],
   "key": {
     "A": {
@@ -16,9 +15,6 @@
     },
     "B": {
       "item": "thirtyyearswar:woollen_cloth"
-    },
-    "C": {
-      "tag": "forge:leather"
     }
   }
 }

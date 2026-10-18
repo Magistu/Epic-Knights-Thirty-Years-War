@@ -11,10 +11,10 @@
   ],
   "key": {
     "A": {
-      "item": "thirtyyearswar:felt_fabric"
+      "item": "thirtyyearswar:woollen_cloth"
     },
     "B": {
-      "item": "minecraft:leather"
+      "item": "thirtyyearswar:felt_fabric"
     }
   }
 }

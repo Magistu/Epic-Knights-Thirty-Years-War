@@ -92,6 +92,14 @@ public final class AddonItems extends ModItemsProvider {
     public static final RegistrySupplier<Item> WOOL_FIBERS = INSTANCE.addIngredientItem("wool_fibers", () -> new Item(new Item.Properties()));
     public static final RegistrySupplier<Item> WOOLLEN_CLOTH = INSTANCE.addIngredientItem("woollen_cloth", () -> new Item(new Item.Properties()));
 
+    public static final RegistrySupplier<MedievalArmorItem> BAROQUE_APRON_SKIRT_BOOTS = INSTANCE.addMedievalArmorItem("baroque_apron_skirt_boots", AddonArmorTypes.BAROQUE_APRON_SKIRT_BOOTS, ArmorItem.Type.BOOTS, new Item.Properties());
+
+    public static final RegistrySupplier<MedievalArmorItem> BAROQUE_BREECHES_BOOTS = INSTANCE.addMedievalArmorItem("baroque_breeches_boots", AddonArmorTypes.BAROQUE_BREECHES_BOOTS, ArmorItem.Type.BOOTS, new Item.Properties());
+
+    public static final RegistrySupplier<MedievalArmorItem> BAROQUE_RIDERS_BREECHES_BOOTS = INSTANCE.addMedievalArmorItem("baroque_riders_breeches_boots", AddonArmorTypes.BAROQUE_RIDERS_BREECHES_BOOTS, ArmorItem.Type.BOOTS, new Item.Properties());
+
+    public static final RegistrySupplier<MedievalArmorItem> BAROQUE_SKIRT_BOOTS = INSTANCE.addMedievalArmorItem("baroque_skirt_boots", AddonArmorTypes.BAROQUE_SKIRT_BOOTS, ArmorItem.Type.BOOTS, new Item.Properties());
+
     private AddonItems() { super(ThirtyYearsWar.ID); }
 
     private RegistrySupplier<Item> addGun(String id, GunSettings config, GunItem.MechanismType mechanismType) {

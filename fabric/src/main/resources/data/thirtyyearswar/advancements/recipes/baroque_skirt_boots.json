@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "L": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:leather"
+            ]
+          }
+        ]
+      }
+    },
+    "S": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "magistuarmory:leather_strips"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "L",
+      "S"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "thirtyyearswar:baroque_skirt_boots"
+    ]
+  }
+}

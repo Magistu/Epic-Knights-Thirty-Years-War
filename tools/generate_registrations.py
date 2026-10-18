@@ -58,7 +58,7 @@ public final class {cls} implements ConfigData {{
 ''')
     mats=[]
     for e in armor:
-        material = 'Items.LEATHER' if 'buff_' in e['id'] else 'AddonItems.WOOLLEN_CLOTH.get()' if e.get('toughness',0) == 0 else 'com.magistuarmory.item.ModItems.STEEL_INGOT.get()'
+        material = 'Items.LEATHER' if e.get('repair_material')=='leather' or 'buff_' in e['id'] else 'AddonItems.WOOLLEN_CLOTH.get()' if e.get('toughness',0) == 0 else 'com.magistuarmory.item.ModItems.STEEL_INGOT.get()'
         mats.append(f'    public static final ArmorType {e["id"].upper()} = create("{e["id"]}", "{e["model"]}", {str(e["dyeable"]).lower()}, () -> Ingredient.of({material}));')
     write(Path('item/armor/AddonArmorTypes.java'),'''package com.magistuarmory.thirtyyearswar.item.armor;
 

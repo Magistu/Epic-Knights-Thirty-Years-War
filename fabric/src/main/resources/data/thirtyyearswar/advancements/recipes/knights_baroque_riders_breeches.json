@@ -2,6 +2,19 @@
   "parent": "minecraft:recipes/root",
   "criteria": {
     "ingredient_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "thirtyyearswar:woollen_cloth"
+            ]
+          }
+        ]
+      }
+    },
+    "ingredient_1": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -10,20 +23,7 @@
             ]
           }
         ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "ingredient_1": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:leather"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
+      }
     }
   },
   "requirements": [

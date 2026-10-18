@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " S ",
+    "L L"
+  ],
+  "key": {
+    "L": {
+      "tag": "forge:leather"
+    },
+    "S": {
+      "tag": "magistuarmory:leather_strips"
+    }
+  },
+  "result": {
+    "item": "thirtyyearswar:baroque_skirt_boots"
+  }
+}

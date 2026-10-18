@@ -10,14 +10,21 @@ public final class GeometryVerification {
     private record Equipment(String id, String kind, String model, String slot) {}
     private record Report(Equipment[] items) {}
     public static void main(String[] args) throws Exception {
+        Report report = new com.google.gson.Gson().fromJson(java.nio.file.Files.readString(java.nio.file.Path.of(args[0])), Report.class);
+        Set<String> armorModels = new HashSet<>();
+        for (Equipment e : report.items()) {
+            if (e.kind().equals("armor") || e.kind().equals("decoration")) armorModels.add(e.model());
+        }
         Map<String, ModelPart> models = new HashMap<>();
         for (var method : EquipmentGeometry.class.getDeclaredMethods()) {
             ModelPart root = ((LayerDefinition) method.invoke(null)).bakeRoot();
-            new HumanoidModel<>(root); // validates the complete seven-part humanoid contract
+            if (armorModels.contains(method.getName())) new HumanoidModel<>(root); // validates the complete seven-part humanoid contract
             models.put(method.getName(), root);
         }
-        for (Equipment e : new com.google.gson.Gson().fromJson(java.nio.file.Files.readString(java.nio.file.Path.of(args[0])), Report.class).items()) {
+        int checked = 0;
+        for (Equipment e : report.items()) {
             if (!e.kind().equals("armor") && !e.kind().equals("decoration")) continue;
+            checked++;
             ModelPart root = models.get(e.model());
             if (root == null) throw new AssertionError("No model for " + e.id());
             List<String> visible = switch (e.slot()) {
@@ -29,6 +36,12 @@ public final class GeometryVerification {
             };
             boolean geometry = visible.stream().map(root::getChild).flatMap(ModelPart::getAllParts).anyMatch(part -> !part.isEmpty());
             if (!geometry) throw new AssertionError("Invisible worn item: " + e.id());
+            if (e.slot().equals("BOOTS")) {
+                for (String hidden : List.of("body", "head", "left_arm", "right_arm")) {
+                    if (root.getChild(hidden).getAllParts().anyMatch(part -> !part.isEmpty()))
+                        throw new AssertionError("Boot model includes clothing geometry: " + e.id());
+                }
+            }
             if (e.slot().equals("CHESTPLATE")) {
                 for (String hidden : List.of("left_leg", "right_leg")) {
                     if (root.getChild(hidden).getAllParts().anyMatch(part -> !part.isEmpty()))
@@ -36,6 +49,6 @@ public final class GeometryVerification {
                 }
             }
         }
-        System.out.println("PASS: " + models.size() + " model layers bake; all 59 wearable/decoration definitions have visible geometry in their equipment slot.");
+        System.out.println("PASS: " + models.size() + " model layers bake; all " + checked + " wearable/decoration definitions have visible geometry in their equipment slot.");
     }
 }

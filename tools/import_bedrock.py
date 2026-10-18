@@ -328,6 +328,9 @@ public final class EquipmentModels extends ModModelsProvider {
     cp(source/'BaroqueRP/pack_icon.png',ASSETS/'icon.png')
     from generate_registrations import generate
     generate(catalog)
+    # Preserve the Java footwear split when reimporting the combined Bedrock items.
+    from split_footwear import main as split_footwear
+    split_footwear(source)
     print('Imported',len(catalog),'items;',len(methods),'geometries;',len(excluded),'excluded')
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('source',type=Path);args=parser.parse_args();main(args.source)

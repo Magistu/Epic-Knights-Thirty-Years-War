@@ -495,4 +495,157 @@ public final class EquipmentGeometry {
         b4.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 16).mirror(true).addBox(-1.650000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.600000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         return LayerDefinition.create(mesh, 64, 32);
     }
+
+    public static LayerDefinition baroque_apron_skirt_leggings_model() {
+        MeshDefinition mesh = new MeshDefinition();
+        PartDefinition root = mesh.getRoot();
+        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition b0 = right_leg.addOrReplaceChild("source_rightLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 19).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.300000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 19).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition b1 = left_leg.addOrReplaceChild("source_leftLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(32, 0).mirror(false).addBox(-1.900000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.300000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 19).mirror(false).addBox(-1.900000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition b2 = body.addOrReplaceChild("source_body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b2.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-5.000000F, 10.000000F, -3.000000F, 10.000000F, 13.000000F, 6.000000F, new CubeDeformation(0.600000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        return LayerDefinition.create(mesh, 64, 64);
+    }
+    public static LayerDefinition baroque_apron_skirt_boots_model() {
+        MeshDefinition mesh = new MeshDefinition();
+        PartDefinition root = mesh.getRoot();
+        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition b0 = right_leg.addOrReplaceChild("source_rightLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 19).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.300000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 19).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition b1 = left_leg.addOrReplaceChild("source_leftLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 19).mirror(false).addBox(-1.900000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        return LayerDefinition.create(mesh, 64, 64);
+    }
+    public static LayerDefinition baroque_breeches_leggings_model() {
+        MeshDefinition mesh = new MeshDefinition();
+        PartDefinition root = mesh.getRoot();
+        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition b0 = right_leg.addOrReplaceChild("source_rightLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(16, 21).mirror(false).addBox(-2.800000F, -1.400000F, -2.500000F, 5.000000F, 6.000000F, 5.000000F, new CubeDeformation(0.200000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 16).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.300000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_2", CubeListBuilder.create().texOffs(48, 0).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition b1 = left_leg.addOrReplaceChild("source_leftLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 16).mirror(true).addBox(-1.900000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.300000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(48, 0).mirror(true).addBox(-1.900000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_2", CubeListBuilder.create().texOffs(16, 21).mirror(true).addBox(-2.200000F, -1.400000F, -2.500000F, 5.000000F, 6.000000F, 5.000000F, new CubeDeformation(0.200000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition b2 = body.addOrReplaceChild("source_body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b2.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.400000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        return LayerDefinition.create(mesh, 64, 32);
+    }
+    public static LayerDefinition baroque_breeches_boots_model() {
+        MeshDefinition mesh = new MeshDefinition();
+        PartDefinition root = mesh.getRoot();
+        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition b0 = right_leg.addOrReplaceChild("source_rightLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(48, 0).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition b1 = left_leg.addOrReplaceChild("source_leftLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(48, 0).mirror(true).addBox(-1.900000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        return LayerDefinition.create(mesh, 64, 32);
+    }
+    public static LayerDefinition baroque_riders_breeches_leggings_model() {
+        MeshDefinition mesh = new MeshDefinition();
+        PartDefinition root = mesh.getRoot();
+        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition b0 = right_leg.addOrReplaceChild("source_rightLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(16, 21).mirror(false).addBox(-2.800000F, -1.400000F, -2.500000F, 5.000000F, 6.000000F, 5.000000F, new CubeDeformation(0.200000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 16).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.300000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_2", CubeListBuilder.create().texOffs(48, 0).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition b1 = left_leg.addOrReplaceChild("source_leftLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 16).mirror(true).addBox(-1.900000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.300000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(48, 0).mirror(true).addBox(-1.900000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_2", CubeListBuilder.create().texOffs(16, 21).mirror(true).addBox(-2.200000F, -1.400000F, -2.500000F, 5.000000F, 6.000000F, 5.000000F, new CubeDeformation(0.200000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition b2 = body.addOrReplaceChild("source_body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b2.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.400000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        return LayerDefinition.create(mesh, 64, 32);
+    }
+    public static LayerDefinition baroque_riders_breeches_boots_model() {
+        MeshDefinition mesh = new MeshDefinition();
+        PartDefinition root = mesh.getRoot();
+        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition b0 = right_leg.addOrReplaceChild("source_rightLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 16).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.300000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(48, 0).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition b1 = left_leg.addOrReplaceChild("source_leftLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 16).mirror(true).addBox(-1.900000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.300000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(48, 0).mirror(true).addBox(-1.900000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        return LayerDefinition.create(mesh, 64, 32);
+    }
+    public static LayerDefinition baroque_skirt_leggings_model() {
+        MeshDefinition mesh = new MeshDefinition();
+        PartDefinition root = mesh.getRoot();
+        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition b0 = right_leg.addOrReplaceChild("source_rightLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 19).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.300000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 19).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition b1 = left_leg.addOrReplaceChild("source_leftLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(32, 0).mirror(false).addBox(-1.900000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.300000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 19).mirror(false).addBox(-1.900000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition b2 = body.addOrReplaceChild("source_body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b2.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-5.000000F, 10.000000F, -3.000000F, 10.000000F, 13.000000F, 6.000000F, new CubeDeformation(0.600000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        return LayerDefinition.create(mesh, 64, 64);
+    }
+    public static LayerDefinition baroque_skirt_boots_model() {
+        MeshDefinition mesh = new MeshDefinition();
+        PartDefinition root = mesh.getRoot();
+        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition b0 = right_leg.addOrReplaceChild("source_rightLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 19).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.300000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 19).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition b1 = left_leg.addOrReplaceChild("source_leftLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b1.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 19).mirror(false).addBox(-1.900000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        return LayerDefinition.create(mesh, 64, 64);
+    }
 }

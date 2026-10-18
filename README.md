@@ -12,7 +12,7 @@ Epic Knights on Minecraft Java Edition.
 
 ### Features
 
-- **74 survival-obtainable items**, including armor, clothing, decorations,
+- **78 survival-obtainable items**, including armor, clothing, decorations,
   weapons and crafting materials.
 - **Nine steel melee weapons** and two functional firearms: the matchlock musket
   and wheellock pistol.
@@ -37,7 +37,7 @@ Configuration options are available for armor, weapons, decorations and guns.
 - Reuses Epic Knights' hilt, leather strip, pole, small steel plate, steel ingot,
   steel nugget and steel plate, without duplicate registrations.
 
-All **74 items are obtainable in survival** through crafting/smelting chains and
+All **78 items are obtainable in survival** through crafting/smelting chains and
 Epic Knights materials. Recipe-book unlocks are included. The two source rapier
 recipes that required their own output now upgrade the base rapier.
 Recipes live in each loader's resources: Fabric uses `c:steel_ingots`,
@@ -148,3 +148,16 @@ tassets follow the torso to remain visible under Java's chest-slot rendering rul
 Artwork, geometry and audio come from the supplied Thirty Years War / Baroque packs;
 their manifests do not name the authors. The cross-loader structure and integration
 follow the local Epic Knights: Addon example by Magistu and its contributors.
+
+## Separate footwear
+
+Apron skirt, breeches, rider’s breeches and skirt now equip only as leggings.
+Their brown footwear is available separately as Apron Skirt Shoes, Breeches Shoes,
+Rider’s Boots and Skirt Shoes. Each uses the boots slot, has 1 defense and 100
+durability, and repairs with leather. Original brown pixels and buckle details
+are preserved; stockings remain on the leggings. Both worn and inventory textures
+are split. The footwear recipes use leather and Epic Knights leather strips;
+breeches recipes no longer consume leather for the removed footwear.
+
+`tools/split_footwear.py /path/to/30-years-war` reapplies this conversion without
+regenerating unrelated assets. The main importer also runs it automatically.

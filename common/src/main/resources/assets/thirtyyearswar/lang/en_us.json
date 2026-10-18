@@ -78,5 +78,9 @@
   "item.thirtyyearswar.baroque_shoulder_sash_decoration": "Shoulder Sash Decoration",
   "item.thirtyyearswar.baroque_waist_sash_decoration": "Waist Sash Decoration",
   "death.attack.thirtyyearswar.bullet": "%1$s was shot by %2$s",
-  "death.attack.thirtyyearswar.bullet.item": "%1$s was shot by %2$s using %3$s"
+  "death.attack.thirtyyearswar.bullet.item": "%1$s was shot by %2$s using %3$s",
+  "item.thirtyyearswar.baroque_apron_skirt_boots": "Apron Skirt Shoes",
+  "item.thirtyyearswar.baroque_breeches_boots": "Breeches Shoes",
+  "item.thirtyyearswar.baroque_riders_breeches_boots": "Rider\u2019s Boots",
+  "item.thirtyyearswar.baroque_skirt_boots": "Skirt Shoes"
 }

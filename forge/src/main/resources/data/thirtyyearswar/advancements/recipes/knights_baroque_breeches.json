@@ -24,23 +24,12 @@
           }
         ]
       }
-    },
-    "ingredient_2": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "tag": "forge:leather"
-          }
-        ]
-      }
     }
   },
   "requirements": [
     [
       "ingredient_0",
-      "ingredient_1",
-      "ingredient_2"
+      "ingredient_1"
     ]
   ],
   "rewards": {

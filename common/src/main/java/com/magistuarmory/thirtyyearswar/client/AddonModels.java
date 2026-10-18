@@ -29,6 +29,22 @@ public final class AddonModels extends ModModelsProvider {
     public static final ModelLayerLocation KNIGHTS_BAROQUE_SLOUCH_HAT_LOCATION = INSTANCE.addArmorModel("knights_baroque_slouch_hat", EquipmentGeometry::knights_baroque_slouch_hat);
     public static final ModelLayerLocation KNIGHTS_BAROQUE_SKULL_CAP_LOCATION = INSTANCE.addArmorModel("knights_baroque_skull_cap", EquipmentGeometry::knights_baroque_skull_cap);
 
+    public static final ModelLayerLocation BAROQUE_APRON_SKIRT_LEGGINGS_MODEL_LOCATION = INSTANCE.addArmorModel("baroque_apron_skirt_leggings_model", EquipmentGeometry::baroque_apron_skirt_leggings_model);
+
+    public static final ModelLayerLocation BAROQUE_APRON_SKIRT_BOOTS_MODEL_LOCATION = INSTANCE.addArmorModel("baroque_apron_skirt_boots_model", EquipmentGeometry::baroque_apron_skirt_boots_model);
+
+    public static final ModelLayerLocation BAROQUE_BREECHES_LEGGINGS_MODEL_LOCATION = INSTANCE.addArmorModel("baroque_breeches_leggings_model", EquipmentGeometry::baroque_breeches_leggings_model);
+
+    public static final ModelLayerLocation BAROQUE_BREECHES_BOOTS_MODEL_LOCATION = INSTANCE.addArmorModel("baroque_breeches_boots_model", EquipmentGeometry::baroque_breeches_boots_model);
+
+    public static final ModelLayerLocation BAROQUE_RIDERS_BREECHES_LEGGINGS_MODEL_LOCATION = INSTANCE.addArmorModel("baroque_riders_breeches_leggings_model", EquipmentGeometry::baroque_riders_breeches_leggings_model);
+
+    public static final ModelLayerLocation BAROQUE_RIDERS_BREECHES_BOOTS_MODEL_LOCATION = INSTANCE.addArmorModel("baroque_riders_breeches_boots_model", EquipmentGeometry::baroque_riders_breeches_boots_model);
+
+    public static final ModelLayerLocation BAROQUE_SKIRT_LEGGINGS_MODEL_LOCATION = INSTANCE.addArmorModel("baroque_skirt_leggings_model", EquipmentGeometry::baroque_skirt_leggings_model);
+
+    public static final ModelLayerLocation BAROQUE_SKIRT_BOOTS_MODEL_LOCATION = INSTANCE.addArmorModel("baroque_skirt_boots_model", EquipmentGeometry::baroque_skirt_boots_model);
+
     // Decorations
     public static final ModelLayerLocation BAROQUE_OPEN_CLOAK_DECORATION_LOCATION = INSTANCE.addDecorationModel("baroque_open_cloak", EquipmentGeometry::knights_baroque_cloak);
     public static final ModelLayerLocation BAROQUE_CLOAK_DECORATION_LOCATION = INSTANCE.addDecorationModel("baroque_cloak", EquipmentGeometry::knights_baroque_cloak);
