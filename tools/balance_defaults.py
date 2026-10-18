@@ -1,13 +1,15 @@
 """Frozen Epic Knights: Addon 1.20.1 profiles; see docs/balance.md.
 Source-pack stats in import-report.json are audit data only.
 """
-ARMOR_DEFAULTS = {'baroque_apron_skirt': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 100, 0, 0 }, new Integer[] { 0, 1, 0, 0 }, 9, true)',
+ARMOR_DEFAULTS = {'baroque_apron_skirt': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 100, 0, 0 }, new Integer[] { 0, 0, 0, 0 }, 9, true)',
+ 'baroque_apron_skirt_boots': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 100, 0, 0, 0 }, new Integer[] { 1, 0, 0, 0 }, 9, true)',
  'baroque_armour': 'ArmorTypeConfig.of(0.50f, 0.0f, new Integer[] { 0, 0, 315, 0 }, new Integer[] { 0, 0, 6, 0 }, 9, true)',
  'baroque_barred_closed_burgonet': 'ArmorTypeConfig.of(1.25f, 0.5f, new Integer[] { 0, 0, 0, 275 }, new Integer[] { 0, 0, 0, 3 }, 9, true)',
  'baroque_barred_lobstertail_helmet': 'ArmorTypeConfig.of(0.60f, 0.0f, new Integer[] { 0, 0, 0, 180 }, new Integer[] { 0, 0, 0, 3 }, 9, '
                                       'true)',
  'baroque_bodice': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 0, 120, 0 }, new Integer[] { 0, 0, 1, 0 }, 9, true)',
- 'baroque_breeches': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 100, 0, 0 }, new Integer[] { 0, 1, 0, 0 }, 9, true)',
+ 'baroque_breeches': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 100, 0, 0 }, new Integer[] { 0, 0, 0, 0 }, 9, true)',
+ 'baroque_breeches_boots': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 100, 0, 0, 0 }, new Integer[] { 1, 0, 0, 0 }, 9, true)',
  'baroque_buff_coat': 'ArmorTypeConfig.of(0.20f, 0.0f, new Integer[] { 0, 0, 210, 0 }, new Integer[] { 0, 0, 4, 0 }, 9, true)',
  'baroque_buff_waistcoat': 'ArmorTypeConfig.of(0.20f, 0.0f, new Integer[] { 0, 0, 210, 0 }, new Integer[] { 0, 0, 4, 0 }, 9, true)',
  'baroque_cabasset_helmet': 'ArmorTypeConfig.of(0.60f, 0.0f, new Integer[] { 0, 0, 0, 200 }, new Integer[] { 0, 0, 0, 2 }, 9, true)',
@@ -61,10 +63,12 @@ ARMOR_DEFAULTS = {'baroque_apron_skirt': 'ArmorTypeConfig.of(0.00f, 0.0f, new In
  'baroque_pikeman_armour': 'ArmorTypeConfig.of(0.60f, 0.0f, new Integer[] { 0, 0, 365, 0 }, new Integer[] { 0, 0, 8, 0 }, 9, true)',
  'baroque_pikeman_cuirass': 'ArmorTypeConfig.of(0.60f, 0.0f, new Integer[] { 0, 0, 365, 0 }, new Integer[] { 0, 0, 8, 0 }, 9, true)',
  'baroque_pikeman_pot_helmet': 'ArmorTypeConfig.of(0.60f, 0.0f, new Integer[] { 0, 0, 0, 180 }, new Integer[] { 0, 0, 0, 2 }, 9, true)',
- 'baroque_riders_breeches': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 100, 0, 0 }, new Integer[] { 0, 1, 0, 0 }, 9, true)',
+ 'baroque_riders_breeches': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 100, 0, 0 }, new Integer[] { 0, 0, 0, 0 }, 9, true)',
+ 'baroque_riders_breeches_boots': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 100, 0, 0, 0 }, new Integer[] { 1, 0, 0, 0 }, 9, true)',
  'baroque_savoyard_helmet': 'ArmorTypeConfig.of(1.25f, 0.0f, new Integer[] { 0, 0, 0, 225 }, new Integer[] { 0, 0, 0, 3 }, 9, true)',
  'baroque_shirt': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 0, 120, 0 }, new Integer[] { 0, 0, 1, 0 }, 9, true)',
- 'baroque_skirt': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 100, 0, 0 }, new Integer[] { 0, 1, 0, 0 }, 9, true)',
+ 'baroque_skirt': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 100, 0, 0 }, new Integer[] { 0, 0, 0, 0 }, 9, true)',
+ 'baroque_skirt_boots': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 100, 0, 0, 0 }, new Integer[] { 1, 0, 0, 0 }, 9, true)',
  'baroque_skull_cap': 'ArmorTypeConfig.of(0.20f, 0.0f, new Integer[] { 0, 0, 0, 170 }, new Integer[] { 0, 0, 0, 2 }, 9, true)',
  'baroque_slouch_hat': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 0, 0, 100 }, new Integer[] { 0, 0, 0, 1 }, 9, true)',
  'baroque_waistcoat': 'ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 0, 120, 0 }, new Integer[] { 0, 0, 1, 0 }, 9, true)'}

@@ -1,34 +1,27 @@
 {
-  "parent": "builtin/entity",
-  "textures": {
-    "particle": "thirtyyearswar:item/baroque_matchlock_musket"
-  },
-  "display": {
-    "gui": {
-      "rotation": [
-        0,
-        0,
-        45
-      ],
-      "scale": [
-        0.6,
-        0.6,
-        0.6
-      ]
-    },
-    "ground": {
-      "scale": [
-        0.4,
-        0.4,
-        0.4
-      ]
-    },
-    "fixed": {
-      "scale": [
-        0.6,
-        0.6,
-        0.6
-      ]
-    }
-  }
+	"format_version": "26.3",
+	"credit": "Made with Blockbench",
+	"parent": "builtin/entity",
+	"textures": {
+		"particle": "thirtyyearswar:item/baroque_matchlock_musket"
+	},
+	"gui_light": "front",
+	"display": {
+		"firstperson_righthand": {
+			"translation": [-2, 0, -5]
+		},
+		"firstperson_lefthand": {
+			"translation": [-2, 0, -5]
+		},
+		"ground": {
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"gui": {
+			"rotation": [-90, -135, -90],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"fixed": {
+			"scale": [0.6, 0.6, 0.6]
+		}
+	}
 }

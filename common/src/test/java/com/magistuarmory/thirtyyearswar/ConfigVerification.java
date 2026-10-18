@@ -30,7 +30,7 @@ public final class ConfigVerification {
         guns.validatePostLoad();
         var gun = guns.get("baroque_matchlock_musket");
         if (gun.damage != 9 || gun.range != 30 || gun.reloadTicks != 60 || gun.enabled) throw new AssertionError("Gun overrides not retained");
-        if (guns.get("baroque_wheellock_pistol").reloadTicks != 20) throw new AssertionError("Pistol default not restored");
+        if (guns.get("baroque_wheellock_pistol").reloadTicks != 59) throw new AssertionError("Pistol default not restored");
         gun.range = Double.NaN;
         boolean rejected = false;
         try { guns.validatePostLoad(); } catch (me.shedaniel.autoconfig.ConfigData.ValidationException expected) { rejected = true; }

@@ -6,11 +6,14 @@
     "count": 1
   },
   "pattern": [
-    "ACA",
+    "DCA",
     "ABA",
     "AAA"
   ],
   "key": {
+    "D": {
+      "item": "minecraft:netherite_ingot"
+    },
     "A": {
       "tag": "c:steel_ingots"
     },

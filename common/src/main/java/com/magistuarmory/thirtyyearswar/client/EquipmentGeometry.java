@@ -7,14 +7,14 @@ import net.minecraft.client.model.geom.builders.*;
 public final class EquipmentGeometry {
     public static LayerDefinition knights_baroque_breeches() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = right_leg.addOrReplaceChild("source_rightLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(16, 21).mirror(false).addBox(-2.800000F, -1.400000F, -2.500000F, 5.000000F, 6.000000F, 5.000000F, new CubeDeformation(0.200000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 16).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.300000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -30,14 +30,14 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_cabasset_helmet() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = head.addOrReplaceChild("source_head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(12, 16).mirror(false).addBox(-7.000000F, -3.000000F, -8.000000F, 6.000000F, -2.000000F, 16.000000F, new CubeDeformation(1.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.500000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -50,14 +50,14 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_cavalier_hat() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = head.addOrReplaceChild("source_head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.600000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 32).mirror(false).addBox(-5.000000F, -5.210000F, -8.000000F, 10.000000F, 0.010000F, 16.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -77,14 +77,14 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_cavalry_armour() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = body.addOrReplaceChild("source_body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(16, 16).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.650000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(16, 0).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(1.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -101,14 +101,14 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_cloak() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = body.addOrReplaceChild("source_body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-8.000000F, 0.000000F, -2.000000F, 16.000000F, 16.000000F, 4.000000F, new CubeDeformation(1.100000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         PartDefinition b1 = right_arm.addOrReplaceChild("source_rightArm", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -120,39 +120,36 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_closed_helmet() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
-        PartDefinition b0 = head.addOrReplaceChild("source_head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.500000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(32, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.480000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_2", CubeListBuilder.create().texOffs(33, 26).mirror(true).addBox(0.000000F, 0.000000F, 0.000000F, 5.000000F, 0.000000F, 5.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, -4.600000F, -7.600000F, 0.030054F, 0.455823F, 0.012004F));
-        b0.addOrReplaceChild("cube_3", CubeListBuilder.create().texOffs(17, 27).mirror(true).addBox(0.000000F, 0.000000F, -0.400000F, 5.000000F, 0.000000F, 5.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(-0.100000F, -4.900000F, -6.100000F, -1.154396F, 0.279576F, -0.003552F));
-        b0.addOrReplaceChild("cube_4", CubeListBuilder.create().texOffs(0, 11).mirror(false).addBox(0.000000F, -11.400000F, -3.500000F, 0.000000F, 10.000000F, 11.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_5", CubeListBuilder.create().texOffs(58, 20).mirror(false).addBox(-0.500000F, -5.000000F, -4.500000F, 1.000000F, 4.300000F, 2.000000F, new CubeDeformation(0.100000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_6", CubeListBuilder.create().texOffs(58, 26).mirror(false).addBox(-2.500000F, -5.000000F, -4.500000F, 1.000000F, 4.300000F, 2.000000F, new CubeDeformation(0.100000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_7", CubeListBuilder.create().texOffs(17, 27).mirror(false).addBox(-5.000000F, 0.000000F, -0.400000F, 5.000000F, 0.000000F, 5.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.100000F, -4.900000F, -6.100000F, -1.154396F, -0.279576F, 0.003552F));
-        b0.addOrReplaceChild("cube_8", CubeListBuilder.create().texOffs(32, 26).mirror(false).addBox(-5.000000F, 0.000000F, 0.000000F, 5.000000F, 0.000000F, 6.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, -4.600000F, -7.600000F, 1.106687F, -0.429233F, 0.012071F));
-        b0.addOrReplaceChild("cube_9", CubeListBuilder.create().texOffs(33, 26).mirror(false).addBox(-5.000000F, 0.000000F, 0.000000F, 5.000000F, 0.000000F, 5.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, -4.600000F, -7.600000F, 0.030054F, -0.455823F, -0.012004F));
-        b0.addOrReplaceChild("cube_10", CubeListBuilder.create().texOffs(32, 26).mirror(true).addBox(0.000000F, 0.000000F, 0.000000F, 5.000000F, 0.000000F, 6.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, -4.600000F, -7.600000F, 1.106687F, 0.429233F, -0.012071F));
-        return LayerDefinition.create(mesh, 128, 64);
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.5F))
+                .texOffs(0, 11).addBox(0.0F, -11.5F, -3.6F, 0.0F, 10.0F, 11.0F, new CubeDeformation(0.0F))
+                .texOffs(58, 20).addBox(-0.5F, -5.0F, -4.5F, 1.0F, 4.3F, 2.0F, new CubeDeformation(0.1F))
+                .texOffs(58, 26).addBox(-2.5F, -5.0F, -4.5F, 1.0F, 4.3F, 2.0F, new CubeDeformation(0.1F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+        PartDefinition head_r1 = head.addOrReplaceChild("head_r1", CubeListBuilder.create().texOffs(32, 26).mirror().addBox(0.0F, 0.0F, 0.0F, 5.0F, 0.0F, 6.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, -4.3F, -7.6F, -1.1067F, -0.4292F, -0.0121F));
+        PartDefinition head_r2 = head.addOrReplaceChild("head_r2", CubeListBuilder.create().texOffs(49, 0).addBox(-5.0F, 0.0F, 0.0F, 5.0F, 0.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -4.3F, -7.6F, -0.0301F, 0.4558F, -0.012F));
+        PartDefinition head_r3 = head.addOrReplaceChild("head_r3", CubeListBuilder.create().texOffs(32, 26).addBox(-5.0F, 0.0F, 0.0F, 5.0F, 0.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -4.3F, -7.6F, -1.1067F, 0.4292F, 0.0121F));
+        PartDefinition head_r4 = head.addOrReplaceChild("head_r4", CubeListBuilder.create().texOffs(17, 27).addBox(-5.0F, 0.0F, -0.4F, 5.0F, 0.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.1F, -4.5F, -6.1F, 1.1544F, 0.2796F, 0.0036F));
+        PartDefinition head_r5 = head.addOrReplaceChild("head_r5", CubeListBuilder.create().texOffs(17, 27).mirror().addBox(0.0F, 0.0F, -0.4F, 5.0F, 0.0F, 5.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(-0.1F, -4.5F, -6.1F, 1.1544F, -0.2796F, -0.0036F));
+        PartDefinition head_r6 = head.addOrReplaceChild("head_r6", CubeListBuilder.create().texOffs(49, 0).mirror().addBox(0.0F, 0.0F, 0.0F, 5.0F, 0.0F, 5.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, -4.3F, -7.6F, -0.0301F, -0.4558F, 0.012F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        return LayerDefinition.create(mesh, 64, 32);
     }
 
     public static LayerDefinition knights_baroque_cuirassier_armour() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = body.addOrReplaceChild("source_body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(16, 16).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.650000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         PartDefinition b1 = right_arm.addOrReplaceChild("source_rightArm", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -168,14 +165,14 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_doublet() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = body.addOrReplaceChild("source_body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(16, 16).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.650000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(16, 0).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(1.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -188,14 +185,14 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_dutch_cap() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = head.addOrReplaceChild("source_head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.600000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 16).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(1.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -204,14 +201,14 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_flat_cap() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = head.addOrReplaceChild("source_head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.600000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 32).mirror(false).addBox(-5.000000F, -4.810000F, -5.000000F, 10.000000F, 0.010000F, 10.000000F, new CubeDeformation(0.600000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -221,86 +218,77 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_grilled_closed_burgonet() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
-        PartDefinition b0 = head.addOrReplaceChild("source_head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.500000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(32, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.480000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_2", CubeListBuilder.create().texOffs(33, 26).mirror(true).addBox(1.000000F, -0.800000F, -7.000000F, 5.000000F, 1.000000F, 5.000000F, new CubeDeformation(0.100000F)), PartPose.offsetAndRotation(-1.000000F, -5.000000F, 0.000000F, -0.043467F, 0.003802F, 0.087184F));
-        b0.addOrReplaceChild("cube_3", CubeListBuilder.create().texOffs(0, 11).mirror(false).addBox(0.000000F, -11.400000F, -3.500000F, 0.000000F, 10.000000F, 11.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_4", CubeListBuilder.create().texOffs(58, 20).mirror(false).addBox(-0.500000F, -5.000000F, -4.500000F, 1.000000F, 4.300000F, 2.000000F, new CubeDeformation(0.100000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_5", CubeListBuilder.create().texOffs(58, 26).mirror(false).addBox(-2.500000F, -5.000000F, -4.500000F, 1.000000F, 4.300000F, 2.000000F, new CubeDeformation(0.100000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_6", CubeListBuilder.create().texOffs(58, 26).mirror(true).addBox(1.500000F, -5.000000F, -4.500000F, 1.000000F, 4.300000F, 2.000000F, new CubeDeformation(0.100000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_7", CubeListBuilder.create().texOffs(33, 26).mirror(false).addBox(-6.000000F, -0.800000F, -7.000000F, 5.000000F, 1.000000F, 5.000000F, new CubeDeformation(0.100000F)), PartPose.offsetAndRotation(1.000000F, -5.000000F, 0.000000F, -0.043467F, -0.003802F, -0.087184F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.5F))
+                .texOffs(32, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.48F))
+                .texOffs(0, 11).addBox(0.0F, -11.4F, -3.5F, 0.0F, 10.0F, 11.0F, new CubeDeformation(0.0F))
+                .texOffs(34, 0).addBox(-3.5F, -8.0F, -4.4F, 7.0F, 8.0F, 8.0F, new CubeDeformation(0.6F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+        PartDefinition head_r1 = head.addOrReplaceChild("head_r1", CubeListBuilder.create().texOffs(33, 26).addBox(-6.0F, -0.8F, -7.0F, 5.0F, 1.0F, 5.0F, new CubeDeformation(0.1F)), PartPose.offsetAndRotation(1.0F, -5.0F, 0.0F, 0.0435F, 0.0038F, -0.0872F));
+        PartDefinition head_r2 = head.addOrReplaceChild("head_r2", CubeListBuilder.create().texOffs(33, 26).mirror().addBox(1.0F, -0.8F, -7.0F, 5.0F, 1.0F, 5.0F, new CubeDeformation(0.1F)).mirror(false), PartPose.offsetAndRotation(-1.0F, -5.0F, 0.0F, 0.0435F, -0.0038F, 0.0872F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         return LayerDefinition.create(mesh, 64, 32);
     }
 
     public static LayerDefinition knights_baroque_lobstertail_helmet() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
-        PartDefinition b0 = head.addOrReplaceChild("source_head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(33, 27).mirror(false).addBox(-5.000000F, 1.200000F, -7.000000F, 4.000000F, -2.000000F, 5.000000F, new CubeDeformation(1.000000F)), PartPose.offsetAndRotation(0.000000F, -6.000000F, 0.000000F, -0.043467F, -0.003802F, -0.087184F));
-        b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.500000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_2", CubeListBuilder.create().texOffs(40, 19).mirror(false).addBox(-4.000000F, 2.000000F, -2.000000F, 9.000000F, 5.000000F, 3.000000F, new CubeDeformation(-0.100000F)), PartPose.offsetAndRotation(-0.500000F, -4.300000F, 0.100000F, -1.134464F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_3", CubeListBuilder.create().texOffs(32, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.480000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_4", CubeListBuilder.create().texOffs(33, 27).mirror(true).addBox(1.000000F, 1.200000F, -7.000000F, 4.000000F, -2.000000F, 5.000000F, new CubeDeformation(1.000000F)), PartPose.offsetAndRotation(0.000000F, -6.000000F, 0.000000F, -0.043467F, 0.003802F, 0.087184F));
-        b0.addOrReplaceChild("cube_5", CubeListBuilder.create().texOffs(0, 18).mirror(false).addBox(-0.500000F, -5.500000F, -6.500000F, 1.000000F, 6.000000F, 6.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.5F))
+                .texOffs(0, 18).addBox(-0.5F, -5.5F, -6.5F, 1.0F, 6.0F, 6.0F, new CubeDeformation(0.0F))
+                .texOffs(32, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.2F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+        PartDefinition head_r1 = head.addOrReplaceChild("head_r1", CubeListBuilder.create().texOffs(33, 27).mirror().addBox(1.0F, 1.2F, -7.0F, 4.0F, -2.0F, 5.0F, new CubeDeformation(1.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, -6.5F, 0.0F, 0.0435F, -0.0038F, 0.0872F));
+        PartDefinition head_r2 = head.addOrReplaceChild("head_r2", CubeListBuilder.create().texOffs(40, 19).addBox(-4.0F, 2.0F, -2.0F, 9.0F, 5.0F, 3.0F, new CubeDeformation(-0.1F)), PartPose.offsetAndRotation(-0.5F, -4.8F, 0.1F, 1.1345F, 0.0F, 0.0F));
+        PartDefinition head_r3 = head.addOrReplaceChild("head_r3", CubeListBuilder.create().texOffs(33, 27).addBox(-5.0F, 1.2F, -7.0F, 4.0F, -2.0F, 5.0F, new CubeDeformation(1.0F)), PartPose.offsetAndRotation(0.0F, -6.5F, 0.0F, 0.0435F, 0.0038F, -0.0872F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         return LayerDefinition.create(mesh, 64, 32);
     }
 
     public static LayerDefinition knights_baroque_matchlock_musket() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
-        PartDefinition b0 = root.addOrReplaceChild("source_rightitem", CubeListBuilder.create(), PartPose.offsetAndRotation(-1.000000F, 4.000000F, 4.000000F, -0.000000F, -0.000000F, 0.000000F));
-        PartDefinition b1 = b0.addOrReplaceChild("source_weapon", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(6, 3).mirror(false).addBox(-0.500000F, -4.000000F, -10.000000F, 0.000000F, 8.000000F, 5.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(24, 17).mirror(false).addBox(-1.200000F, -1.000000F, -12.000000F, 0.000000F, 8.000000F, 5.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_2", CubeListBuilder.create().texOffs(17, 1).mirror(false).addBox(-1.000000F, -4.000000F, -8.000000F, 2.000000F, 14.000000F, 1.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_3", CubeListBuilder.create().texOffs(17, 1).mirror(false).addBox(-1.000000F, -4.000000F, -8.000000F, 2.000000F, 14.000000F, 1.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_4", CubeListBuilder.create().texOffs(14, 22).mirror(false).addBox(-1.000000F, -11.032750F, -9.965320F, 2.000000F, 9.000000F, 3.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_5", CubeListBuilder.create().texOffs(24, 0).mirror(false).addBox(-1.000000F, -9.000000F, 1.000000F, 2.000000F, 9.000000F, 2.000000F, new CubeDeformation(0.100000F)), PartPose.offsetAndRotation(0.000000F, -2.500000F, -10.700000F, 0.305433F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_6", CubeListBuilder.create().texOffs(0, 16).mirror(false).addBox(-1.000000F, -2.000000F, -10.000000F, 2.000000F, 24.000000F, 2.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_7", CubeListBuilder.create().texOffs(0, 16).mirror(false).addBox(-0.500000F, 21.100000F, -9.500000F, 1.000000F, 1.000000F, 1.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        PartDefinition b2 = b1.addOrReplaceChild("source_hammer", CubeListBuilder.create(), PartPose.offsetAndRotation(-0.500000F, 0.000000F, -9.000000F, -0.000000F, -0.000000F, 0.000000F));
-        PartDefinition b3 = b1.addOrReplaceChild("source_frizzen", CubeListBuilder.create(), PartPose.offsetAndRotation(-0.500000F, 3.500000F, -9.500000F, 1.570796F, -0.000000F, 0.000000F));
-        PartDefinition b4 = b1.addOrReplaceChild("source_pan", CubeListBuilder.create(), PartPose.offsetAndRotation(-1.000000F, 3.500000F, -9.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b4.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(8, 0).mirror(false).addBox(-1.000000F, -2.000000F, 0.000000F, 2.000000F, 2.000000F, 1.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b4.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(8, 3).mirror(false).addBox(-1.000000F, -2.000000F, 0.500000F, 2.000000F, 2.000000F, 1.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        PartDefinition b5 = b1.addOrReplaceChild("source_ram_rod", CubeListBuilder.create(), PartPose.offsetAndRotation(1.000000F, 20.000000F, -4.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b5.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 42).mirror(false).addBox(-1.500000F, -15.000000F, -4.500000F, 1.000000F, 16.000000F, 1.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition rightitem = partdefinition.addOrReplaceChild("rightitem", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 4.0F));
+
+        PartDefinition weapon = rightitem.addOrReplaceChild("weapon", CubeListBuilder.create().texOffs(6, 3).addBox(-0.5F, -4.0F, -3.0F, 0.0F, 8.0F, 5.0F, new CubeDeformation(0.0F))
+                .texOffs(17, 1).addBox(-1.0F, -4.0F, -1.0F, 2.0F, 14.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(17, 1).addBox(-1.0F, -4.0F, -1.0F, 2.0F, 14.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(14, 22).addBox(-1.0F, -11.0328F, -2.9653F, 2.0F, 9.0F, 3.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 16).addBox(-1.0F, -2.0F, -3.0F, 2.0F, 24.0F, 2.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 16).addBox(-0.5F, 21.1F, -2.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -1.5708F, 0.0F, -3.1416F));
+
+        PartDefinition weapon_r1 = weapon.addOrReplaceChild("weapon_r1", CubeListBuilder.create().texOffs(24, 0).addBox(-1.0F, -9.0F, 1.0F, 2.0F, 9.0F, 2.0F, new CubeDeformation(0.1F)), PartPose.offsetAndRotation(0.0F, -2.5F, -3.7F, -0.3054F, 0.0F, 0.0F));
+
+        PartDefinition cock = weapon.addOrReplaceChild("cock", CubeListBuilder.create().texOffs(24, 17).addBox(0.0F, -6.0F, -3.5F, 0.0F, 8.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(-1.2F, 5.0F, -1.5F));
+
+        PartDefinition wick = cock.addOrReplaceChild("wick", CubeListBuilder.create().texOffs(41, -5).addBox(0.9F, -1.0F, -3.0F, 0.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(-0.8F, -2.5F, -1.0F));
+
+        PartDefinition cover = weapon.addOrReplaceChild("cover", CubeListBuilder.create().texOffs(54, 0).addBox(-0.5F, -0.5F, -0.1F, 1.0F, 4.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offset(-1.5F, 0.5F, -2.0F));
+
+        PartDefinition pan = weapon.addOrReplaceChild("pan", CubeListBuilder.create().texOffs(8, 0).addBox(-1.0F, -2.0F, 0.0F, 2.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-1.0F, 3.5F, -2.0F));
+
+        PartDefinition ram_rod = weapon.addOrReplaceChild("ram_rod", CubeListBuilder.create().texOffs(0, 42).addBox(-1.5F, -15.0F, -4.5F, 1.0F, 16.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(1.0F, 20.0F, 3.0F));
+
         return LayerDefinition.create(mesh, 64, 64);
     }
 
     public static LayerDefinition knights_baroque_monmouth_cap() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = head.addOrReplaceChild("source_head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.600000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 32).mirror(false).addBox(-5.000000F, -4.810000F, -5.000000F, 10.000000F, 0.010000F, 10.000000F, new CubeDeformation(0.600000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -309,53 +297,49 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_open_burgonet() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
-        PartDefinition b0 = head.addOrReplaceChild("source_head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.500000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(32, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.480000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_2", CubeListBuilder.create().texOffs(20, 16).mirror(true).addBox(1.000000F, 1.200000F, -8.000000F, 6.000000F, -2.000000F, 16.000000F, new CubeDeformation(1.000000F)), PartPose.offsetAndRotation(0.000000F, -3.800000F, 0.000000F, 0.387154F, -0.071704F, 0.153812F));
-        b0.addOrReplaceChild("cube_3", CubeListBuilder.create().texOffs(0, 12).mirror(false).addBox(0.000000F, -11.400000F, -3.500000F, 0.000000F, 9.000000F, 11.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_4", CubeListBuilder.create().texOffs(20, 16).mirror(false).addBox(-7.000000F, 1.200000F, -8.000000F, 6.000000F, -2.000000F, 16.000000F, new CubeDeformation(1.000000F)), PartPose.offsetAndRotation(0.000000F, -3.800000F, 0.000000F, 0.387154F, 0.071704F, -0.153812F));
-        b0.addOrReplaceChild("cube_5", CubeListBuilder.create().texOffs(0, 18).mirror(false).addBox(-5.000000F, -2.000000F, 2.000000F, 10.000000F, 1.000000F, 4.000000F, new CubeDeformation(0.230000F)), PartPose.offsetAndRotation(-0.100000F, 1.000000F, -1.000000F, 0.174533F, -0.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.5F))
+                .texOffs(32, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.2F))
+                .texOffs(0, 12).addBox(0.0F, -11.4F, -3.5F, 0.0F, 9.0F, 11.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+        PartDefinition cube_r1 = head.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(0, 18).addBox(-5.0F, -2.0F, 2.0F, 10.0F, 1.0F, 4.0F, new CubeDeformation(0.23F)), PartPose.offsetAndRotation(-0.1F, 1.0F, -1.0F, -0.1745F, 0.0F, 0.0F));
+        PartDefinition head_r1 = head.addOrReplaceChild("head_r1", CubeListBuilder.create().texOffs(20, 16).addBox(-7.0F, 1.2F, -8.0F, 6.0F, -2.0F, 16.0F, new CubeDeformation(1.0F)), PartPose.offsetAndRotation(0.0F, -3.8F, 0.0F, -0.3872F, -0.0717F, -0.1538F));
+        PartDefinition head_r2 = head.addOrReplaceChild("head_r2", CubeListBuilder.create().texOffs(20, 16).mirror().addBox(1.0F, 1.2F, -8.0F, 6.0F, -2.0F, 16.0F, new CubeDeformation(1.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, -3.8F, 0.0F, -0.3872F, 0.0717F, 0.1538F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         return LayerDefinition.create(mesh, 64, 32);
     }
 
     public static LayerDefinition knights_baroque_pikeman_pot_helmet() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
-        PartDefinition b0 = head.addOrReplaceChild("source_head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(20, 16).mirror(false).addBox(-7.000000F, 1.200000F, -8.000000F, 6.000000F, -2.000000F, 16.000000F, new CubeDeformation(1.000000F)), PartPose.offsetAndRotation(0.000000F, -4.400000F, 0.000000F, 0.080790F, 0.014229F, -0.173958F));
-        b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.500000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_2", CubeListBuilder.create().texOffs(32, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.480000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_3", CubeListBuilder.create().texOffs(20, 16).mirror(true).addBox(1.000000F, 1.200000F, -8.000000F, 6.000000F, -2.000000F, 16.000000F, new CubeDeformation(1.000000F)), PartPose.offsetAndRotation(0.000000F, -4.400000F, 0.000000F, 0.080790F, -0.014229F, 0.173958F));
-        b0.addOrReplaceChild("cube_4", CubeListBuilder.create().texOffs(0, 13).mirror(false).addBox(0.000000F, -10.400000F, -5.500000F, 0.000000F, 8.000000F, 11.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.5F))
+                .texOffs(32, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.48F))
+                .texOffs(0, 13).addBox(0.0F, -10.4F, -5.5F, 0.0F, 8.0F, 11.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+        PartDefinition head_r1 = head.addOrReplaceChild("head_r1", CubeListBuilder.create().texOffs(20, 16).mirror().addBox(1.0F, 1.2F, -8.0F, 6.0F, -2.0F, 16.0F, new CubeDeformation(1.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, -4.4F, 0.0F, -0.0808F, 0.0142F, 0.174F));
+        PartDefinition head_r2 = head.addOrReplaceChild("head_r2", CubeListBuilder.create().texOffs(20, 16).addBox(-7.0F, 1.2F, -8.0F, 6.0F, -2.0F, 16.0F, new CubeDeformation(1.0F)), PartPose.offsetAndRotation(0.0F, -4.4F, 0.0F, -0.0808F, -0.0142F, -0.174F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         return LayerDefinition.create(mesh, 64, 32);
     }
 
     public static LayerDefinition knights_baroque_savoyard_helmet() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = head.addOrReplaceChild("source_head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.500000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(32, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.700000F, 8.000000F, new CubeDeformation(0.480000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -368,14 +352,14 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_shoulder_sash() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = body.addOrReplaceChild("source_body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(1.100000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         PartDefinition b1 = right_arm.addOrReplaceChild("source_rightArm", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -388,14 +372,14 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_skirt() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = right_leg.addOrReplaceChild("source_rightLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 19).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.300000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 19).mirror(false).addBox(-2.100000F, 0.000000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.590000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -409,14 +393,14 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_skull_cap() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = head.addOrReplaceChild("source_head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.500000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(32, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.480000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -425,14 +409,14 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_slouch_hat() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = head.addOrReplaceChild("source_head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, -8.000000F, -4.000000F, 8.000000F, 8.000000F, 8.000000F, new CubeDeformation(0.600000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(-16, 16).mirror(false).addBox(-8.000000F, -5.200000F, -8.000000F, 16.000000F, 0.000000F, 16.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -450,14 +434,14 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_waist_sash() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = body.addOrReplaceChild("source_body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(1.100000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 32).mirror(false).addBox(-1.200000F, 7.000000F, 3.300000F, 5.000000F, 12.000000F, 0.010000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -466,40 +450,38 @@ public final class EquipmentGeometry {
 
     public static LayerDefinition knights_baroque_wheellock_pistol() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
-        PartDefinition b0 = root.addOrReplaceChild("source_rightitem", CubeListBuilder.create(), PartPose.offsetAndRotation(-1.000000F, 4.000000F, 4.000000F, -0.000000F, -0.000000F, 0.000000F));
-        PartDefinition b1 = b0.addOrReplaceChild("source_weapon", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(6, 3).mirror(false).addBox(-0.500000F, -4.000000F, -10.000000F, 0.000000F, 8.000000F, 5.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(17, 1).mirror(false).addBox(-1.000000F, -4.000000F, -8.000000F, 2.000000F, 14.000000F, 1.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_2", CubeListBuilder.create().texOffs(32, 0).mirror(false).addBox(-0.500000F, 3.000000F, -8.500000F, 1.000000F, 10.000000F, 1.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_3", CubeListBuilder.create().texOffs(17, 1).mirror(false).addBox(-1.000000F, -4.000000F, -8.000000F, 2.000000F, 14.000000F, 1.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_4", CubeListBuilder.create().texOffs(24, 0).mirror(false).addBox(-1.000000F, -6.000000F, 1.000000F, 2.000000F, 6.000000F, 2.000000F, new CubeDeformation(0.100000F)), PartPose.offsetAndRotation(0.000000F, -2.500000F, -10.700000F, 0.523599F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_5", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-1.000000F, -6.000000F, 3.200000F, 2.000000F, 1.000000F, 1.000000F, new CubeDeformation(0.100000F)), PartPose.offsetAndRotation(0.000000F, -2.500000F, -10.700000F, 0.523599F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_6", CubeListBuilder.create().texOffs(0, 16).mirror(false).addBox(-1.000000F, -2.000000F, -10.000000F, 2.000000F, 14.000000F, 2.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_7", CubeListBuilder.create().texOffs(0, 2).mirror(false).addBox(-2.000000F, 1.000000F, -10.000000F, 1.000000F, 2.000000F, 2.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_8", CubeListBuilder.create().texOffs(9, 0).mirror(false).addBox(-1.000000F, 1.000000F, -12.000000F, 1.000000F, 4.000000F, 3.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_9", CubeListBuilder.create().texOffs(6, 0).mirror(false).addBox(-1.000000F, 1.000000F, -7.000000F, 2.000000F, 2.000000F, 1.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b1.addOrReplaceChild("cube_10", CubeListBuilder.create().texOffs(0, 16).mirror(false).addBox(-0.500000F, 11.100000F, -9.500000F, 1.000000F, 1.000000F, 1.000000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition rightitem = partdefinition.addOrReplaceChild("rightitem", CubeListBuilder.create(), PartPose.offset(-0.2F, 0.0F, 2.0F));
+
+        PartDefinition weapon = rightitem.addOrReplaceChild("weapon", CubeListBuilder.create().texOffs(6, 3).addBox(-0.5F, -4.0F, -3.0F, 0.0F, 8.0F, 5.0F, new CubeDeformation(0.0F))
+                .texOffs(17, 1).addBox(-1.0F, -4.0F, -1.0F, 2.0F, 14.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(17, 1).addBox(-1.0F, -4.0F, -1.0F, 2.0F, 14.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 16).addBox(-1.0F, -2.0F, -3.0F, 2.0F, 14.0F, 2.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 2).addBox(-2.0F, 1.0F, -3.0F, 1.0F, 2.0F, 2.0F, new CubeDeformation(0.0F))
+                .texOffs(6, 0).addBox(-1.0F, 1.0F, 0.0F, 2.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 16).addBox(-0.5F, 11.1F, -2.5F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -1.5708F, 0.0F, -3.1416F));
+
+        PartDefinition weapon_r1 = weapon.addOrReplaceChild("weapon_r1", CubeListBuilder.create().texOffs(0, 0).addBox(-1.0F, -6.0F, 3.2F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.1F))
+                .texOffs(24, 0).addBox(-1.0F, -6.0F, 1.0F, 2.0F, 6.0F, 2.0F, new CubeDeformation(0.1F)), PartPose.offsetAndRotation(0.0F, -2.5F, -3.7F, -0.5236F, 0.0F, 0.0F));
+
+        PartDefinition ramrod = weapon.addOrReplaceChild("ramrod", CubeListBuilder.create().texOffs(32, 0).addBox(-1.5F, -17.0F, -4.5F, 1.0F, 10.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(1.0F, 20.0F, 3.0F));
+
+        PartDefinition hammer = weapon.addOrReplaceChild("hammer", CubeListBuilder.create().texOffs(9, 0).addBox(-0.5F, -2.5F, -2.0F, 1.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offset(-0.6F, 3.5F, -3.0F));
+
+        PartDefinition spanner = weapon.addOrReplaceChild("spanner", CubeListBuilder.create().texOffs(53, -5).addBox(0.0F, -0.5F, 0.0F, 0.0F, 1.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(-1.5F, 2.0F, -2.0F));
         return LayerDefinition.create(mesh, 64, 64);
     }
 
     public static LayerDefinition knights_pikeman_armour() {
         MeshDefinition mesh = new MeshDefinition();
-        PartDefinition root = mesh.getRoot();
-        PartDefinition head = root.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition hat = root.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition body = root.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
-        PartDefinition right_arm = root.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
-        PartDefinition left_arm = root.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
-        PartDefinition right_leg = root.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
-        PartDefinition left_leg = root.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
+        PartDefinition partdefinition = mesh.getRoot();
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition hat = partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.000000F, 0.000000F, 0.000000F));
+        PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.000000F, 2.000000F, 0.000000F));
+        PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.000000F, 2.000000F, 0.000000F));
+        PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
+        PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = body.addOrReplaceChild("source_body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(16, 16).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(0.650000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(16, 0).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(1.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));

@@ -1,8 +1,29 @@
 # Epic Knights: Thirty Years War
 
-Minecraft **1.20.1**, Fabric and Forge equipment addon for **Epic Knights 10.11**.
-Mod ID: `thirtyyearswar`. Requires Architectury API 9.x and Cloth Config 11.x;
-Fabric also requires Fabric API. The example Epic Knights: Addon is not required.
+Equipment addon for **Epic Knights**. Mod ID: `thirtyyearswar`. The example
+Epic Knights: Addon is not required.
+
+## About
+
+Bring the weapons, armor and clothing of the 17th century to Minecraft with this
+content addon for **Epic Knights**. This Java Edition addon is a port of the
+[Thirty Years War MCPE addon](https://mcpedl.com/thirty-years-war/), adapted for
+Epic Knights on Minecraft Java Edition.
+
+### Features
+
+- **74 survival-obtainable items**, including armor, clothing, decorations,
+  weapons and crafting materials.
+- **Nine steel melee weapons** and two functional firearms: the matchlock musket
+  and wheellock pistol.
+- Firearms use **paper cartridges**. The matchlock also requires flint and steel
+  in your offhand to reload.
+- Dyeable clothing, hats, cloaks and sashes, plus darkened armor variants.
+- Gun reloading and aiming animations, configurable weapon stats and armor
+  penetration, and bullets that can break glass and activate bells.
+
+Items use Epic Knights materials and fit into its equipment and crafting systems.
+Configuration options are available for armor, weapons, decorations and guns.
 
 ## Content and survival
 

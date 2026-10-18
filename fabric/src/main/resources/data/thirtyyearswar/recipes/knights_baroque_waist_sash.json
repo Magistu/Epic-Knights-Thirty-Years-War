@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "result": {
-    "item": "thirtyyearswar:baroque_waist_sash",
+    "item": "magistuarmory:baroque_waist_sash_decoration",
     "count": 1
   },
   "pattern": [

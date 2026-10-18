@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "result": {
-    "item": "thirtyyearswar:baroque_panel_cloak",
+    "item": "magistuarmory:baroque_panel_cloak_decoration",
     "count": 1
   },
   "pattern": [
@@ -14,7 +14,7 @@
       "item": "thirtyyearswar:woollen_cloth"
     },
     "C": {
-      "item": "thirtyyearswar:baroque_cloak"
+      "item": "magistuarmory:baroque_cloak_decoration"
     }
   }
 }

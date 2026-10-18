@@ -6,11 +6,14 @@
     "count": 1
   },
   "pattern": [
-    " B ",
+    "EB ",
     "DAA",
     "C  "
   ],
   "key": {
+    "E": {
+      "item": "minecraft:flint_and_steel"
+    },
     "A": {
       "tag": "c:steel_ingots"
     },

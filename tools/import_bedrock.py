@@ -6,6 +6,7 @@ from PIL import Image
 from recipe_materials import REUSED, material_tags, FORGE_VANILLA
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT/'common/src/main/resources/assets/thirtyyearswar'
+DECORATION_ASSETS = ROOT/'common/src/main/resources/assets/magistuarmory'
 JAVA = ROOT/'common/src/main/java/com/magistuarmory/thirtyyearswar'
 REPAIRS=[]
 def read(p):
@@ -104,13 +105,17 @@ def atlas(g,texture):
 
 def recipes(source,catalog,loader):
     available={e['id'] for e in catalog}; written=set()
+    decorations={e['id'] for e in catalog if e['kind']=='decoration'}
+    def item_id(id):return f'magistuarmory:{id}_decoration' if id in decorations else 'thirtyyearswar:'+id
     replacements=material_tags(loader)
     def ingredient(v):
         item=v['item'].lower();id=item.split(':')[-1]
         if item.startswith('knights:'):
             if id in replacements:return {'tag':replacements[id]}
             if id not in available:raise ValueError('Unknown ingredient '+item)
-            item='thirtyyearswar:'+id
+            item=item_id(id)
+        elif id in available and item.startswith('thirtyyearswar:'):
+            item=item_id(id)
         elif item=='minecraft:wool':return {'tag':'minecraft:wool'}
         elif item=='minecraft:oak_planks':return {'tag':'minecraft:planks'}
         elif item=='minecraft:iron_nugget':return {'tag':'c:iron_nuggets' if loader=='fabric' else 'forge:nuggets/iron'}
@@ -125,13 +130,13 @@ def recipes(source,catalog,loader):
             if key=='minecraft:recipe_furnace':
                 out=d['output']['item'].split(':')[-1]
                 if out in available:
-                    write(folder/(p.stem+'.json'),{'type':'minecraft:smelting','ingredient':ingredient(d['input']),'result':'thirtyyearswar:'+out,'experience':0.1,'cookingtime':200});written.add(out)
+                    write(folder/(p.stem+'.json'),{'type':'minecraft:smelting','ingredient':ingredient(d['input']),'result':item_id(out),'experience':0.1,'cookingtime':200});written.add(out)
                 continue
             result=d.get('result',{})
             if not isinstance(result,dict):continue
             out=result.get('item','').split(':')[-1]
             if out not in available:continue
-            r={'type':key.replace('recipe_','crafting_'),'category':'equipment','result':{'item':'thirtyyearswar:'+out,'count':result.get('count',1)}}
+            r={'type':key.replace('recipe_','crafting_'),'category':'equipment','result':{'item':item_id(out),'count':result.get('count',1)}}
             if 'pattern' in d:
                 width=max(map(len,d['pattern']));r['pattern']=[row.ljust(width) for row in d['pattern']]
                 r['key']={k:ingredient(v) for k,v in d['key'].items() if k in ''.join(r['pattern'])}
@@ -159,6 +164,8 @@ def main(source):
             for folder in ['models/item','textures/item','textures/models/armor']:
                 for path in (ASSETS/folder).glob(id+'.*'):path.unlink()
                 for path in (ASSETS/folder).glob(id+'_*.png'):path.unlink()
+            if e['kind']=='decoration':
+                (DECORATION_ASSETS/f'models/item/{id}_decoration.json').unlink(missing_ok=True)
     # These directories contain only importer-owned recipes and unlocks.
     for loader in ['common','fabric','forge']:
         for sub in ['recipes','advancements/recipes']:
@@ -169,7 +176,7 @@ def main(source):
             (ROOT/f'common/src/main/resources/data/{namespace}/tags/items/{tag}.json').unlink(missing_ok=True)
     (ROOT/'docs/recipe-report.json').unlink(missing_ok=True)
     (ASSETS/'equipment.json').unlink(missing_ok=True)
-    attaches={};geos={};icons={};items={};excluded=[];catalog=[];methods={};lang={}
+    attaches={};geos={};icons={};items={};excluded=[];catalog=[];methods={};lang={};decoration_lang={}
     for pack in ['Baroque','30YW']:
         rp=source/(pack+'RP')
         for p in sorted((rp/'attachables').rglob('*.json')):
@@ -198,7 +205,8 @@ def main(source):
         name=c.get('minecraft:display_name',{}).get('value',id.replace('_',' ').title()).split('\n')[0].strip();name=re.sub('§.','',name)
         for col in ['black','red','green','yellow']:
             if id.startswith('baroque_'+col+'_'):name=col.title()+' '+name
-        lang['item.thirtyyearswar.'+id]=name
+        if kind=='decoration':decoration_lang[f'item.magistuarmory.{id}_decoration']=name
+        else:lang['item.thirtyyearswar.'+id]=name
         icon=c['minecraft:icon']
         if isinstance(icon,dict):icon=icon.get('texture',icon.get('textures',{}).get('default'))
         path,rp=icons[icon]
@@ -207,10 +215,33 @@ def main(source):
         icon_image=Image.open(texture_path(rp/(path+'.png'))).convert('RGBA')
         icon_target=ASSETS/f'textures/item/{id}.png';icon_target.parent.mkdir(parents=True,exist_ok=True);icon_image.save(icon_target)
         itemmodel={'parent':'minecraft:item/handheld' if kind in ['gun','weapon'] else 'minecraft:item/generated','textures':{'layer0':f'thirtyyearswar:item/{id}'}}
+        blocking_model=None
         if kind=='weapon':
-            e['damage']=c['minecraft:damage'].get('value',0) if isinstance(c['minecraft:damage'],dict) else c['minecraft:damage'];e['polearm']=any(s in id for s in ['pike','halberd','partisan'])
-            scale=2.5 if 'pike' in id else 1.7 if e['polearm'] else 1
-            if scale!=1:itemmodel['display']={'thirdperson_righthand':{'rotation':[0,-90,55],'translation':[0,4,0],'scale':[scale,scale,scale]},'thirdperson_lefthand':{'rotation':[0,90,-55],'translation':[0,4,0],'scale':[scale,scale,scale]}}
+            e['damage']=c['minecraft:damage'].get('value',0) if isinstance(c['minecraft:damage'],dict) else c['minecraft:damage'];e['polearm']=any(s in id for s in ['pike','halberd','partisan','pollax'])
+            itemmodel['overrides']=[{'predicate':{'blocking':1},'model':f'thirtyyearswar:item/{id}_blocking'}]
+            if e['polearm']:
+                itemmodel['display']={
+                    'thirdperson_righthand':{'rotation':[-55,-90,0],'translation':[0,13,-1],'scale':[2.8125,2.8125,1]},
+                    'thirdperson_lefthand':{'rotation':[-55,90,0],'translation':[0,13,-1],'scale':[2.8125,2.8125,1]},
+                    'firstperson_righthand':{'rotation':[-60,-90,30],'translation':[1.13,7.5,-1.62],'scale':[2.25,2.25,1]},
+                    'firstperson_lefthand':{'rotation':[-60,90,-30],'translation':[-1.13,7.5,-1.62],'scale':[2.25,2.25,1]},
+                    'gui':{'scale':[1.25,1.25,1]}}
+                blocking_pose={
+                    'firstperson_righthand':{'rotation':[30,-23,122],'translation':[-9.8,6.25,-1.55],'scale':[2.25,2.25,1]},
+                    'firstperson_lefthand':{'rotation':[-150,23,58],'translation':[-9.8,6.25,-1.55],'scale':[2.25,2.25,1]}}
+            else:
+                itemmodel['display']={
+                    'thirdperson_righthand':{'rotation':[-50,-90,0],'translation':[0,14,0.2],'scale':[1.875,1.875,1]},
+                    'thirdperson_lefthand':{'rotation':[-50,90,0],'translation':[0,14,0.2],'scale':[1.875,1.875,1]},
+                    'firstperson_righthand':{'rotation':[0,-90,30],'translation':[1.13,11,1.13],'scale':[1.5,1.5,1]},
+                    'firstperson_lefthand':{'rotation':[0,90,-30],'translation':[1.13,11,1.13],'scale':[1.5,1.5,1]},
+                    'gui':{'scale':[1.35,1.35,1]}}
+                blocking_pose={
+                    'firstperson_righthand':{'rotation':[129,-35,180],'translation':[-8,9.25,-4.75],'scale':[1.5,1.5,1]},
+                    'firstperson_lefthand':{'rotation':[-51,35,0],'translation':[-8,9.25,-4.75],'scale':[1.5,1.5,1]}}
+            blocking_model=copy.deepcopy(itemmodel)
+            blocking_model.pop('overrides',None)
+            blocking_model['display'].update(blocking_pose)
         if wear or kind=='gun':
             a,rp=attaches[source_id];gid=a['geometry']['default'];g=geos[gid];e['geometry']=gid
             tex=texture_path(rp/(a['textures']['default']+'.png'));g,im=atlas(g,tex)
@@ -231,7 +262,11 @@ def main(source):
                 tags=c.get('minecraft:tags',{}).get('tags',[])
                 e['toughness']=next((float(x.split('-')[-1]) for x in tags if 'toughness-' in x),0)
                 e['knockback']=next((float(x.split('-')[-1])/10 for x in tags if 'knockback-' in x),0)
-                folder='textures/models/armor'; names=([id,id+'_layer_1',id+'_layer_2'] if e['wearable'] else [id]) if kind=='decoration' else [id+'_layer_1',id+'_layer_2']
+                folder='textures/models/armor'
+                if kind=='decoration':
+                    names=[id,id+'_layer_1'] if e['wearable'] else [id]
+                else:
+                    names=[id+'_layer_1'] + ([id+'_layer_2'] if e['slot']=='LEGGINGS' else [])
             else:
                 folder='textures/item';names=[id+'_model'];e['reload_ticks']=round(c.get('minecraft:use_modifiers',{}).get('use_duration',2.25)*20)
                 itemmodel={'parent':'builtin/entity','textures':{'particle':f'thirtyyearswar:item/{id}'},'display':{'gui':{'rotation':[0,0,45],'scale':[0.6,0.6,0.6]},'ground':{'scale':[0.4,0.4,0.4]},'fixed':{'scale':[0.6,0.6,0.6]}}} 
@@ -240,11 +275,22 @@ def main(source):
                 if e['dyeable']:
                     base,overlay=split_dye(im);base.save(target);overlay.save(target.with_name(name+'_overlay.png'))
                 else:im.save(target)
-        write(ASSETS/f'models/item/{id}.json',itemmodel)
+        model_root=DECORATION_ASSETS/'models/item' if kind=='decoration' else ASSETS/'models/item'
+        model_name=id+'_decoration' if kind=='decoration' else id
+        write(model_root/f'{model_name}.json',itemmodel)
+        if blocking_model:
+            write(model_root/f'{id}_blocking.json',blocking_model)
         catalog.append(e)
+    armor_textures=ASSETS/'textures/models/armor'
+    valid_layer_2={f"{e['id']}_layer_2.png" for e in catalog if e['kind']=='armor' and e.get('slot')=='LEGGINGS'}
+    valid_layer_2.update(f"{e['id']}_layer_2_overlay.png" for e in catalog
+                         if e['kind']=='armor' and e.get('slot')=='LEGGINGS' and e.get('dyeable'))
+    for path in armor_textures.glob('*_layer_2*.png'):
+        if path.name not in valid_layer_2:path.unlink()
     # The catalog is audit metadata only. Runtime items/configs are explicit Java declarations.
     lang.update({'death.attack.thirtyyearswar.bullet':'%1$s was shot by %2$s','death.attack.thirtyyearswar.bullet.item':'%1$s was shot by %2$s using %3$s'})
     write(ASSETS/'lang/en_us.json',lang)
+    write(DECORATION_ASSETS/'lang/en_us.json',decoration_lang)
     for loader in ['fabric','forge']:recipes(source,catalog,loader)
     write(ROOT/'docs/import-report.json',{'source_packs':['Baroque','30YW'],'items':catalog,'excluded':excluded,'source_repairs':[str(Path(x).relative_to(source)) for x in REPAIRS],'notes':['No shield item definitions exist in these packs.','Unregistered resource-only shell rapier and flags are not included.']})
     methods_text='\n\n'.join(f'    public static LayerDefinition {n}() {{\n        {body}\n    }}' for n,body in sorted(methods.items()))

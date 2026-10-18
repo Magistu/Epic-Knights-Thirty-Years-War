@@ -65,6 +65,7 @@ public final class {cls} implements ConfigData {{
 import com.magistuarmory.thirtyyearswar.ThirtyYearsWar;
 import com.magistuarmory.thirtyyearswar.item.AddonItems;
 import com.magistuarmory.item.armor.ArmorType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Items;
@@ -74,7 +75,11 @@ public final class AddonArmorTypes {
     private static ArmorType create(String name, String model, boolean dyeable, java.util.function.Supplier<Ingredient> repairIngredient) {
         var c = ThirtyYearsWar.CONFIG.armor.get(name);
         boolean enabled = c.enabled && (!dyeable || ThirtyYearsWar.CONFIG.decorations.get(name).enabled);
-        return new ArmorType(ThirtyYearsWar.id(name), ThirtyYearsWar.id(model), c.toughness, c.knockbackResistance,
+        ResourceLocation materialId = switch (name) {
+            case "baroque_cloak", "baroque_open_cloak", "baroque_panel_cloak" -> new ResourceLocation("magistuarmory", name);
+            default -> ThirtyYearsWar.id(name);
+        };
+        return new ArmorType(materialId, ThirtyYearsWar.id(model), c.toughness, c.knockbackResistance,
                 new Integer[] {c.bootsDurability, c.leggingsDurability, c.chestplateDurability, c.helmetDurability},
                 new Integer[] {c.bootsDefense, c.leggingsDefense, c.chestplateDefense, c.helmetDefense},
                 c.enchantmentValue, dyeable ? SoundEvents.ARMOR_EQUIP_LEATHER : SoundEvents.ARMOR_EQUIP_IRON, enabled,
@@ -89,9 +94,9 @@ public final class AddonArmorTypes {
             typ='MedievalArmorItem';call=f'INSTANCE.addDyeableMedievalArmorItem({arg}, AddonArmorTypes.{const}, ArmorItem.Type.{e["slot"]}, {props}, CONFIG.decorations.get({arg}).defaultColor)' if e['dyeable'] else f'INSTANCE.addMedievalArmorItem({arg}, AddonArmorTypes.{const}, ArmorItem.Type.{e["slot"]}, {props})'
         elif kind=='decoration':
             if e.get('wearable'):
-                typ='DyeableWearableArmorDecorationItem';call=f'AddonArmorTypes.{const}.isDisabled() ? null : INSTANCE.addDyeableWearableArmorDecorationItem({arg}, AddonArmorTypes.{const}, ArmorItem.Type.CHESTPLATE, {props}, CONFIG.decorations.get({arg}).defaultColor)'
+                typ='DyeableWearableArmorDecorationItem';call=f'AddonArmorTypes.{const}.isDisabled() ? null : addDyeableWearableDecoration({arg}, AddonArmorTypes.{const}, ArmorItem.Type.CHESTPLATE, CONFIG.decorations.get({arg}).defaultColor)'
             else:
-                typ='DyeableArmorDecorationItem';call=f'!CONFIG.decorations.get({arg}).enabled ? null : INSTANCE.addDyeableArmorDecorationItem({arg}, () -> new DyeableArmorDecorationItem(ThirtyYearsWar.id({arg}), {props}, ArmorItem.Type.CHESTPLATE, CONFIG.decorations.get({arg}).defaultColor))'
+                typ='DyeableArmorDecorationItem';call=f'!CONFIG.decorations.get({arg}).enabled ? null : addDyeableDecoration({arg}, ArmorItem.Type.CHESTPLATE, CONFIG.decorations.get({arg}).defaultColor)'
         elif kind=='weapon':typ='MedievalWeaponItem';call=f'INSTANCE.addMedievalWeaponItem({arg}, {props}, ModItemTier.STEEL, CONFIG.weapons.get({arg}))'
         elif kind=='gun':typ='Item';call=f'INSTANCE.addGun({arg}, CONFIG.guns.get({arg}))'
         else:typ='Item';call=f'INSTANCE.addIngredientItem({arg}, () -> new Item({props}))'
@@ -106,7 +111,10 @@ import com.magistuarmory.thirtyyearswar.WarPlatform;
 import com.magistuarmory.thirtyyearswar.config.AddonConfig;
 import com.magistuarmory.thirtyyearswar.config.GunsConfig.GunSettings;
 import com.magistuarmory.thirtyyearswar.item.armor.AddonArmorTypes;
+import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 
@@ -114,10 +122,28 @@ import net.minecraft.world.item.Item;
 public final class AddonItems extends ModItemsProvider {
     public static final AddonConfig CONFIG = ThirtyYearsWar.CONFIG;
     public static final AddonItems INSTANCE = new AddonItems();
+    private static final DeferredRegister<Item> DECORATION_ITEMS = DeferredRegister.create("magistuarmory", Registries.ITEM);
 
 '''+ '\n'.join(lines)+'''
 
     private AddonItems() { super(ThirtyYearsWar.ID); }
+    private static RegistrySupplier<DyeableWearableArmorDecorationItem> addDyeableWearableDecoration(String id, com.magistuarmory.item.armor.ArmorType type, ArmorItem.Type slot, int color) {
+        RegistrySupplier<DyeableWearableArmorDecorationItem> item = ItemRegistryHelper.registerDyeableWearableArmorDecorationItem(DECORATION_ITEMS, id + "_decoration", type, slot, new Item.Properties(), color);
+        INSTANCE.armorDecorationItems.add(item);
+        INSTANCE.dyeableItems.add(item);
+        INSTANCE.armorItems.add(item);
+        return item;
+    }
+    private static RegistrySupplier<DyeableArmorDecorationItem> addDyeableDecoration(String id, ArmorItem.Type slot, int color) {
+        RegistrySupplier<DyeableArmorDecorationItem> item = DECORATION_ITEMS.register(id + "_decoration", () -> new DyeableArmorDecorationItem(new ResourceLocation("magistuarmory", id), new Item.Properties(), slot, color));
+        INSTANCE.armorDecorationItems.add(item);
+        INSTANCE.dyeableItems.add(item);
+        return item;
+    }
+    @Override public void init() {
+        super.init();
+        DECORATION_ITEMS.register();
+    }
     private RegistrySupplier<Item> addGun(String id, GunSettings config) {
         if (!config.enabled) return null;
         RegistrySupplier<Item> item = items.register(id, () -> WarPlatform.createGun(id, config));

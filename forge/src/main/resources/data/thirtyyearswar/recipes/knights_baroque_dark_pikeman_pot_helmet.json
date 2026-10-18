@@ -1,9 +1,16 @@
 {
-  "type": "minecraft:smelting",
-  "ingredient": {
+  "type": "minecraft:smithing_transform",
+  "base": {
     "item": "thirtyyearswar:baroque_pikeman_pot_helmet"
   },
-  "result": "thirtyyearswar:baroque_dark_pikeman_pot_helmet",
-  "experience": 0.1,
-  "cookingtime": 200
+  "addition": {
+    "item": "minecraft:black_dye"
+  },
+  "result": {
+    "item": "thirtyyearswar:baroque_dark_pikeman_pot_helmet",
+    "count": 1
+  },
+  "template": {
+    "item": "magistuarmory:darkening_template"
+  }
 }

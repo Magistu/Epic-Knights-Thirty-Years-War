@@ -11,24 +11,41 @@ def read(p):return json.loads(p.read_text())
 def check(value,message):
     if not value:raise AssertionError(message)
 items=read(ROOT/'docs/import-report.json')['items'];ids={e['id'] for e in items}
+decoration_registry={f"magistuarmory:{e['id']}_decoration":e['id'] for e in items if e['kind']=='decoration'}
+def addon_item_id(item):
+    if item in decoration_registry:return decoration_registry[item]
+    if item.startswith('thirtyyearswar:'):
+        return item.split(':',1)[1]
+    return None
+def armor_texture_stems(e):
+    id=e['id']
+    if e['kind']=='decoration':return [id,id+'_layer_1'] if e.get('wearable') else [id]
+    return [id+'_layer_1'] + ([id+'_layer_2'] if e.get('slot')=='LEGGINGS' else [])
+expected_layer_2={f"{e['id']}_layer_2.png" for e in items if e['kind']=='armor' and e.get('slot')=='LEGGINGS'}
+expected_layer_2.update(f"{e['id']}_layer_2_overlay.png" for e in items
+                        if e['kind']=='armor' and e.get('slot')=='LEGGINGS' and e.get('dyeable'))
+armor_texture_dir=ASSETS/'textures/models/armor'
+actual_layer_2={p.name for p in armor_texture_dir.glob('*_layer_2*.png')}
+check(actual_layer_2==expected_layer_2,'Unexpected non-leggings layer_2 textures: '+str(actual_layer_2-expected_layer_2))
 check(not (ASSETS/'equipment.json').exists(),'Runtime JSON catalog must not exist')
 registry=(ROOT/'common/src/main/java/com/magistuarmory/thirtyyearswar/item/AddonItems.java').read_text()
 registered=set(re.findall(r'public static final RegistrySupplier<[^>]+> ([A-Z_]+) =',registry))
 check(registered=={id.upper() for id in ids},'Java declarations do not match audit inventory')
 check(not any(re.match(r'baroque_(black|green|red|yellow)_',id) for id in ids),'Color variants remain')
-check(len(ids)==len(items)==74,'Unexpected or duplicate item IDs')
-check(Counter(e['kind'] for e in items)=={'armor':54,'decoration':5,'weapon':9,'gun':2,'ammo':1,'ingredient':3},'Unexpected scope')
-lang=read(ASSETS/'lang/en_us.json');geo=(ROOT/'common/src/main/java/com/magistuarmory/thirtyyearswar/client/EquipmentGeometry.java').read_text()
+check(len(ids)==len(items)==78,'Unexpected or duplicate item IDs')
+check(Counter(e['kind'] for e in items)=={'armor':58,'decoration':5,'weapon':9,'gun':2,'ammo':1,'ingredient':3},'Unexpected scope')
+lang=read(ASSETS/'lang/en_us.json');decoration_lang=read(RES/'assets/magistuarmory/lang/en_us.json');geo=(ROOT/'common/src/main/java/com/magistuarmory/thirtyyearswar/client/EquipmentGeometry.java').read_text()
 for e in items:
-    id=e['id'];check('item.thirtyyearswar.'+id in lang,'Missing translation '+id)
-    m=read(ASSETS/f'models/item/{id}.json')
+    id=e['id'];decoration=e['kind']=='decoration';item_key=f'item.magistuarmory.{id}_decoration' if decoration else 'item.thirtyyearswar.'+id
+    check(item_key in (decoration_lang if decoration else lang),'Missing translation '+id)
+    m=read(RES/f"assets/{'magistuarmory' if decoration else 'thirtyyearswar'}/models/item/{id+'_decoration' if decoration else id}.json")
     for t in m['textures'].values():
         ns,path=t.split(':');check((RES/f'assets/{ns}/textures/{path}.png').is_file(),'Missing texture '+t)
     if 'model' in e:check('LayerDefinition '+e['model']+'()' in geo,'Missing geometry '+id)
     if e['kind']=='weapon':check(isinstance(e['damage'],int) and e['damage']>0,'Invalid damage '+id)
     if e['kind']=='gun':check(0<e['reload_ticks']<200,'Invalid charge time '+id)
     if e['kind'] in ['armor','decoration']:
-        stems=([id,id+'_layer_1',id+'_layer_2'] if e.get('wearable') else [id]) if e['kind']=='decoration' else [id+'_layer_1',id+'_layer_2']
+        stems=armor_texture_stems(e)
         for stem in stems:
             for suffix in ['', '_overlay'] if e['dyeable'] else ['']:
                 p=ASSETS/f'textures/models/armor/{stem}{suffix}.png';check(p.is_file(),'Missing worn texture '+str(p))
@@ -48,15 +65,16 @@ for loader in ['fabric', 'forge']:
     folder=ROOT/f'{loader}/src/main/resources/data/thirtyyearswar'
     for p in (folder/'recipes').glob('*.json'):
         r=read(p);result=r['result'];result=result if isinstance(result,str) else result['item']
-        check(result.removeprefix('thirtyyearswar:') in ids,'Unknown recipe output '+str(p));outputs.add(result.split(':')[1])
+        result_id=addon_item_id(result)
+        check(result_id in ids,'Unknown recipe output '+str(p));outputs.add(result_id)
         ingredients=list(r.get('key',{}).values())+r.get('ingredients',[])+([r['ingredient']] if 'ingredient' in r else [])
-        dependencies.append((result.split(':')[1],{v['item'].split(':')[1] for v in ingredients if v.get('item','').startswith('thirtyyearswar:')}))
+        dependencies.append((result_id,{item_id for v in ingredients if (item_id:=addon_item_id(v.get('item',''))) is not None}))
         for v in ingredients:
             if 'tag' in v:
                 check(v['tag'] in set(tags.values()) | (set(FORGE_VANILLA.values()) if loader=='forge' else set()) | {'minecraft:wool','minecraft:planks', 'c:iron_nuggets' if loader=='fabric' else 'forge:nuggets/iron'},'Unexpected ingredient tag '+str(v))
                 continue
             item=v['item'];check(not item.startswith('knights:'),'Unconverted ingredient '+str(p))
-            if item.startswith('thirtyyearswar:'):check(item.split(':')[1] in ids,'Unknown recipe input '+str(p))
+            if item.startswith(('thirtyyearswar:','magistuarmory:')):check(addon_item_id(item) in ids,'Unknown recipe input '+str(p))
         if 'pattern' in r:
             check(len(set(map(len,r['pattern'])))==1,'Ragged recipe '+str(p))
             check(set(''.join(r['pattern']))-{' '}==set(r['key']),'Invalid recipe key '+str(p))
@@ -88,7 +106,7 @@ if Image:
     for e in items:
         if not e.get('dyeable'):continue
         id=e['id'];paths=[ASSETS/f'textures/item/{id}.png']
-        stems=([id,id+'_layer_1',id+'_layer_2'] if e.get('wearable') else [id]) if e['kind']=='decoration' else [id+'_layer_1',id+'_layer_2']
+        stems=armor_texture_stems(e)
         paths.extend(ASSETS/f'textures/models/armor/{stem}.png' for stem in stems)
         for p in paths:
             pixels=[px for px in Image.open(p).convert('RGBA').getdata() if px[3]]

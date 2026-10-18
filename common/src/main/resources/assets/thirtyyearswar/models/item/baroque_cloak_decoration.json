@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "thirtyyearswar:item/baroque_cloak",
+    "layer1": "thirtyyearswar:item/baroque_cloak_overlay"
+  }
+}

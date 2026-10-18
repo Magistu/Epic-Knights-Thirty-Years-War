@@ -40,6 +40,16 @@
           }
         ]
       }
+    },
+    "ingredient_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:flint_and_steel"
+          }
+        ]
+      }
     }
   },
   "requirements": [
@@ -47,7 +57,8 @@
       "ingredient_0",
       "ingredient_1",
       "ingredient_2",
-      "ingredient_3"
+      "ingredient_3",
+      "ingredient_4"
     ]
   ],
   "rewards": {

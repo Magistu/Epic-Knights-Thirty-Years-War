@@ -7,7 +7,6 @@
   },
   "pattern": [
     "AAA",
-    "B B",
     "B B"
   ],
   "key": {
@@ -15,7 +14,7 @@
       "item": "thirtyyearswar:felt_fabric"
     },
     "B": {
-      "tag": "forge:leather"
+      "item": "minecraft:leather"
     }
   }
 }

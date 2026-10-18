@@ -1,4 +1,5 @@
 package com.magistuarmory.thirtyyearswar.misc;
+
 import com.magistuarmory.thirtyyearswar.item.AddonItems;
 import dev.architectury.registry.CreativeTabRegistry;
 import net.minecraft.core.registries.Registries;

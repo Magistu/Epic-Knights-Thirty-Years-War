@@ -3,6 +3,7 @@ package com.magistuarmory.thirtyyearswar.item.armor;
 import com.magistuarmory.thirtyyearswar.ThirtyYearsWar;
 import com.magistuarmory.thirtyyearswar.item.AddonItems;
 import com.magistuarmory.item.armor.ArmorType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Items;
@@ -65,10 +66,15 @@ public final class AddonArmorTypes {
     public static final ArmorType BAROQUE_SKULL_CAP = create("baroque_skull_cap", "knights_baroque_skull_cap", false, () -> Ingredient.of(com.magistuarmory.item.ModItems.STEEL_INGOT.get()));
     public static final ArmorType BAROQUE_SLOUCH_HAT = create("baroque_slouch_hat", "knights_baroque_slouch_hat", true, () -> Ingredient.of(AddonItems.WOOLLEN_CLOTH.get()));
     public static final ArmorType BAROQUE_WAISTCOAT = create("baroque_waistcoat", "knights_baroque_doublet", true, () -> Ingredient.of(AddonItems.WOOLLEN_CLOTH.get()));
+
     private static ArmorType create(String name, String model, boolean dyeable, java.util.function.Supplier<Ingredient> repairIngredient) {
         var c = ThirtyYearsWar.CONFIG.armor.get(name);
         boolean enabled = c.enabled && (!dyeable || ThirtyYearsWar.CONFIG.decorations.get(name).enabled);
-        return new ArmorType(ThirtyYearsWar.id(name), ThirtyYearsWar.id(model), c.toughness, c.knockbackResistance,
+        ResourceLocation materialId = switch (name) {
+            case "baroque_cloak", "baroque_open_cloak", "baroque_panel_cloak" -> new ResourceLocation(ThirtyYearsWar.ID, name);
+            default -> ThirtyYearsWar.id(name);
+        };
+        return new ArmorType(materialId, ThirtyYearsWar.id(model), c.toughness, c.knockbackResistance,
                 new Integer[] {c.bootsDurability, c.leggingsDurability, c.chestplateDurability, c.helmetDurability},
                 new Integer[] {c.bootsDefense, c.leggingsDefense, c.chestplateDefense, c.helmetDefense},
                 c.enchantmentValue, dyeable ? SoundEvents.ARMOR_EQUIP_LEATHER : SoundEvents.ARMOR_EQUIP_IRON, enabled,
