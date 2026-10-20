@@ -75,7 +75,7 @@ public final class ArmorConfig implements ConfigData {
         values.put("baroque_waistcoat", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 0, 120, 0 }, new Integer[] { 0, 0, 1, 0 }, 9, true));
         values.put("baroque_apron_skirt_boots", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 100, 0, 0, 0 }, new Integer[] { 1, 0, 0, 0 }, 9, true));
         values.put("baroque_breeches_boots", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 100, 0, 0, 0 }, new Integer[] { 1, 0, 0, 0 }, 9, true));
-        values.put("baroque_riders_breeches_boots", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 100, 0, 0, 0 }, new Integer[] { 1, 0, 0, 0 }, 9, true));
+        values.put("baroque_riders_breeches_boots", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 130, 0, 0, 0 }, new Integer[] { 2, 0, 0, 0 }, 9, true));
         values.put("baroque_skirt_boots", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 100, 0, 0, 0 }, new Integer[] { 1, 0, 0, 0 }, 9, true));
         return values;
     }

@@ -123,6 +123,15 @@ bash gradlew :forge:runClient
 Install the plain JAR from the appropriate loader's `build/libs/`, excluding the
 `-sources`, `-javadoc` and `-dev-shadow` artifacts.
 
+## Publishing
+
+Set `MODRINTH_TOKEN` and `CURSEFORGE_TOKEN` in your environment, then run
+`gradlew.bat publishMods` (or `gradlew.bat :fabric:publishMod` /
+`gradlew.bat :forge:publishMod` to publish one loader). The task builds and uploads the remapped release JARs;
+project IDs, Minecraft version, loader tags and Epic Knights dependencies are
+configured in Gradle. Optional per-loader changelogs can be placed at
+`fabric/CHANGELOG.md` and `forge/CHANGELOG.md`.
+
 The checks cover config overrides and partial files, all 24 geometry layers,
 equipment-slot visibility, explicit Java registrations, resource references and
 survival recipe reachability (including cycles). Running the Python validator with

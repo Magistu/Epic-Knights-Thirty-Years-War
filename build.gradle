@@ -88,3 +88,9 @@ ext.minecraftGameVersions = {
         return [rootProject.minecraft_version]
     }
 }()
+
+tasks.register("publishMods") {
+    group = "publishing"
+    description = "Build and publish the Fabric and Forge releases to Modrinth and CurseForge."
+    dependsOn(":fabric:publishMod", ":forge:publishMod")
+}

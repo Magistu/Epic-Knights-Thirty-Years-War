@@ -4,14 +4,11 @@
   "pattern": [
     "L L",
     "L L",
-    "S S"
+    "L L"
   ],
   "key": {
     "L": {
       "item": "minecraft:leather"
-    },
-    "S": {
-      "tag": "magistuarmory:leather_strips"
     }
   },
   "result": {

@@ -4,14 +4,11 @@
   "pattern": [
     "L L",
     "L L",
-    "S S"
+    "L L"
   ],
   "key": {
     "L": {
       "tag": "forge:leather"
-    },
-    "S": {
-      "tag": "magistuarmory:leather_strips"
     }
   },
   "result": {

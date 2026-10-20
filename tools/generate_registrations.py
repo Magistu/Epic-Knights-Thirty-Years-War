@@ -57,9 +57,19 @@ public final class {cls} implements ConfigData {{
 {extra}}}
 ''')
     mats=[]
+    leather_sound_armor = {
+        'baroque_apron_skirt', 'baroque_bodice', 'baroque_breeches', 'baroque_buff_coat',
+        'baroque_buff_waistcoat', 'baroque_cavalier_hat', 'baroque_cloak', 'baroque_coat',
+        'baroque_doublet', 'baroque_dutch_cap', 'baroque_flat_cap', 'baroque_monmouth_cap',
+        'baroque_officer_doublet', 'baroque_open_cloak', 'baroque_panel_cloak',
+        'baroque_riders_breeches', 'baroque_shirt', 'baroque_skirt', 'baroque_slouch_hat',
+        'baroque_waistcoat',
+    }
     for e in armor:
         material = 'Items.LEATHER' if e.get('repair_material')=='leather' or 'buff_' in e['id'] else 'AddonItems.WOOLLEN_CLOTH.get()' if e.get('toughness',0) == 0 else 'com.magistuarmory.item.ModItems.STEEL_INGOT.get()'
-        mats.append(f'    public static final ArmorType {e["id"].upper()} = create("{e["id"]}", "{e["model"]}", {str(e["dyeable"]).lower()}, () -> Ingredient.of({material}));')
+        leather_sound = e['id'] in leather_sound_armor or e['id'].endswith('_boots')
+        equip_sound = 'SoundEvents.ARMOR_EQUIP_LEATHER' if leather_sound else 'SoundEvents.ARMOR_EQUIP_IRON'
+        mats.append(f'    public static final ArmorType {e["id"].upper()} = create("{e["id"]}", "{e["model"]}", {str(e["dyeable"]).lower()}, {equip_sound}, () -> Ingredient.of({material}));')
     write(Path('item/armor/AddonArmorTypes.java'),'''package com.magistuarmory.thirtyyearswar.item.armor;
 
 import com.magistuarmory.thirtyyearswar.ThirtyYearsWar;
@@ -72,7 +82,7 @@ import net.minecraft.world.item.Items;
 
 public final class AddonArmorTypes {
 '''+ '\n'.join(mats)+'''
-    private static ArmorType create(String name, String model, boolean dyeable, java.util.function.Supplier<Ingredient> repairIngredient) {
+    private static ArmorType create(String name, String model, boolean dyeable, net.minecraft.sounds.SoundEvent equipSound, java.util.function.Supplier<Ingredient> repairIngredient) {
         var c = ThirtyYearsWar.CONFIG.armor.get(name);
         boolean enabled = c.enabled && (!dyeable || ThirtyYearsWar.CONFIG.decorations.get(name).enabled);
         ResourceLocation materialId = switch (name) {
@@ -82,7 +92,7 @@ public final class AddonArmorTypes {
         return new ArmorType(materialId, ThirtyYearsWar.id(model), c.toughness, c.knockbackResistance,
                 new Integer[] {c.bootsDurability, c.leggingsDurability, c.chestplateDurability, c.helmetDurability},
                 new Integer[] {c.bootsDefense, c.leggingsDefense, c.chestplateDefense, c.helmetDefense},
-                c.enchantmentValue, dyeable ? SoundEvents.ARMOR_EQUIP_LEATHER : SoundEvents.ARMOR_EQUIP_IRON, enabled,
+                c.enchantmentValue, equipSound, enabled,
                 repairIngredient);
     }
 }
