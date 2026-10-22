@@ -432,6 +432,38 @@ public final class EquipmentGeometry {
         return LayerDefinition.create(mesh, 64, 32);
     }
 
+    public static LayerDefinition knights_baroque_ruff() {
+        MeshDefinition mesh = new MeshDefinition();
+        PartDefinition partdefinition = mesh.getRoot();
+        partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F));
+        partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.0F, 24.0F, 0.0F));
+
+        PartDefinition ruff_collar_r1 = body.addOrReplaceChild("ruff_collar_r1", CubeListBuilder.create().texOffs(0, 0).addBox(-6.0F, -0.5F, -6.0F, 12.0F, 2.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -1.1F, 0.0F, 0.3316F, 0.0F, 0.0F));
+        partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.0F, 2.0F, 0.0F));
+        partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.0F, 2.0F, 0.0F));
+        partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.9F, 12.0F, 0.0F));
+        partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.9F, 12.0F, 0.0F));
+
+        return LayerDefinition.create(mesh, 64, 64);
+    }
+
+    public static LayerDefinition knights_baroque_short_ruff() {
+        MeshDefinition mesh = new MeshDefinition();
+        PartDefinition partdefinition = mesh.getRoot();
+        partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F));
+        partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.0F, 24.0F, 0.0F));
+
+        PartDefinition ruff_collar_r1 = body.addOrReplaceChild("ruff_collar_r1", CubeListBuilder.create().texOffs(0, 0).addBox(-5.0F, -0.5F, -5.0F, 10.0F, 2.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -1.1F, 0.0F, 0.3316F, 0.0F, 0.0F));
+        partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.0F, 2.0F, 0.0F));
+        partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.0F, 2.0F, 0.0F));
+        partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.9F, 12.0F, 0.0F));
+        partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.9F, 12.0F, 0.0F));
+
+        return LayerDefinition.create(mesh, 64, 64);
+    }
+
     public static LayerDefinition knights_baroque_waist_sash() {
         MeshDefinition mesh = new MeshDefinition();
         PartDefinition partdefinition = mesh.getRoot();

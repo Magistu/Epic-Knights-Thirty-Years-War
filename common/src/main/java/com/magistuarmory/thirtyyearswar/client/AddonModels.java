@@ -28,6 +28,8 @@ public final class AddonModels extends ModModelsProvider {
     public static final ModelLayerLocation KNIGHTS_BAROQUE_MONMOUTH_CAP_LOCATION = INSTANCE.addArmorModel("knights_baroque_monmouth_cap", EquipmentGeometry::knights_baroque_monmouth_cap);
     public static final ModelLayerLocation KNIGHTS_BAROQUE_SLOUCH_HAT_LOCATION = INSTANCE.addArmorModel("knights_baroque_slouch_hat", EquipmentGeometry::knights_baroque_slouch_hat);
     public static final ModelLayerLocation KNIGHTS_BAROQUE_SKULL_CAP_LOCATION = INSTANCE.addArmorModel("knights_baroque_skull_cap", EquipmentGeometry::knights_baroque_skull_cap);
+    public static final ModelLayerLocation KNIGHTS_BAROQUE_RUFF_LOCATION = INSTANCE.addArmorModel("knights_baroque_ruff", EquipmentGeometry::knights_baroque_ruff);
+    public static final ModelLayerLocation KNIGHTS_BAROQUE_SHORT_RUFF_LOCATION = INSTANCE.addArmorModel("knights_baroque_short_ruff", EquipmentGeometry::knights_baroque_short_ruff);
 
     public static final ModelLayerLocation BAROQUE_APRON_SKIRT_LEGGINGS_MODEL_LOCATION = INSTANCE.addArmorModel("baroque_apron_skirt_leggings_model", EquipmentGeometry::baroque_apron_skirt_leggings_model);
 
@@ -51,6 +53,8 @@ public final class AddonModels extends ModModelsProvider {
     public static final ModelLayerLocation BAROQUE_PANEL_CLOAK_DECORATION_LOCATION = INSTANCE.addDecorationModel("baroque_panel_cloak", EquipmentGeometry::knights_baroque_cloak);
     public static final ModelLayerLocation BAROQUE_SHOULDER_SASH_DECORATION_LOCATION = INSTANCE.addDecorationModel("baroque_shoulder_sash", EquipmentGeometry::knights_baroque_shoulder_sash);
     public static final ModelLayerLocation BAROQUE_WAIST_SASH_DECORATION_LOCATION = INSTANCE.addDecorationModel("baroque_waist_sash", EquipmentGeometry::knights_baroque_waist_sash);
+    public static final ModelLayerLocation BAROQUE_RUFF_DECORATION_LOCATION = INSTANCE.addDecorationModel("baroque_ruff", EquipmentGeometry::knights_baroque_ruff);
+    public static final ModelLayerLocation BAROQUE_SHORT_RUFF_DECORATION_LOCATION = INSTANCE.addDecorationModel("baroque_short_ruff", EquipmentGeometry::knights_baroque_short_ruff);
 
     public AddonModels() {
         super(ThirtyYearsWar.ID);
