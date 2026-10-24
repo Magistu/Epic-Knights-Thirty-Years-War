@@ -110,7 +110,7 @@ public final class EquipmentGeometry {
         PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
         PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = body.addOrReplaceChild("source_body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-8.000000F, 0.000000F, -2.000000F, 16.000000F, 16.000000F, 4.000000F, new CubeDeformation(1.100000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-8.000000F, 0.000000F, -2.000000F, 16.000000F, 16.000000F, 4.000000F, new CubeDeformation(1.200000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         PartDefinition b1 = right_arm.addOrReplaceChild("source_rightArm", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b1.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(48, 0).mirror(false).addBox(-3.000000F, -1.950000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(1.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         PartDefinition b2 = left_arm.addOrReplaceChild("source_leftArm", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -361,7 +361,7 @@ public final class EquipmentGeometry {
         PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
         PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = body.addOrReplaceChild("source_body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(1.100000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(1.200000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         PartDefinition b1 = right_arm.addOrReplaceChild("source_rightArm", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b1.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(24, 0).mirror(false).addBox(-3.000000F, -1.950000F, -2.000000F, 4.000000F, 12.000000F, 4.000000F, new CubeDeformation(1.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b1.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 32).mirror(false).addBox(-2.200000F, -3.000000F, 3.300000F, 5.000000F, 18.000000F, 0.010000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
@@ -475,7 +475,7 @@ public final class EquipmentGeometry {
         PartDefinition right_leg = partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.900000F, 12.000000F, 0.000000F));
         PartDefinition left_leg = partdefinition.addOrReplaceChild("left_leg", CubeListBuilder.create(), PartPose.offset(1.900000F, 12.000000F, 0.000000F));
         PartDefinition b0 = body.addOrReplaceChild("source_body", CubeListBuilder.create(), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
-        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(1.100000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
+        b0.addOrReplaceChild("cube_0", CubeListBuilder.create().texOffs(0, 0).mirror(false).addBox(-4.000000F, 0.000000F, -2.000000F, 8.000000F, 12.000000F, 4.000000F, new CubeDeformation(1.200000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         b0.addOrReplaceChild("cube_1", CubeListBuilder.create().texOffs(0, 32).mirror(false).addBox(-1.200000F, 7.000000F, 3.300000F, 5.000000F, 12.000000F, 0.010000F, new CubeDeformation(0.000000F)), PartPose.offsetAndRotation(0.000000F, 0.000000F, 0.000000F, -0.000000F, -0.000000F, 0.000000F));
         return LayerDefinition.create(mesh, 64, 64);
     }
@@ -686,7 +686,7 @@ public final class EquipmentGeometry {
         PartDefinition partdefinition = mesh.getRoot();
         partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
         partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
-        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0).addBox(-8.0F, 0.0F, -2.0F, 16.0F, 16.0F, 4.0F, new CubeDeformation(1.1F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+        PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0).addBox(-8.0F, 0.0F, -2.0F, 16.0F, 16.0F, 4.0F, new CubeDeformation(1.2F)), PartPose.offset(0.0F, 0.0F, 0.0F));
         partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create(), PartPose.offset(-5.0F, 2.0F, 0.0F));
         partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create(), PartPose.offset(5.0F, 2.0F, 0.0F));
         partdefinition.addOrReplaceChild("right_leg", CubeListBuilder.create(), PartPose.offset(-1.9F, 12.0F, 0.0F));
@@ -728,7 +728,7 @@ public final class EquipmentGeometry {
         partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
         partdefinition.addOrReplaceChild("hat", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
         partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0)
-                        .addBox(-4.0F, 0.0F, -2.0F, 8.0F, 14.0F, 4.0F, new CubeDeformation(0.25F)),
+                        .addBox(-4.0F, 0.0F, -2.0F, 8.0F, 14.0F, 4.0F, new CubeDeformation(0.7F)),
                 PartPose.offset(0.0F, 0.0F, 0.0F));
         PartDefinition right_arm = partdefinition.addOrReplaceChild("right_arm", CubeListBuilder.create().texOffs(24, 0).mirror().addBox(-3.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.6F)).mirror(false), PartPose.offset(-5.0F, 2.0F, 0.0F));
         PartDefinition left_arm = partdefinition.addOrReplaceChild("left_arm", CubeListBuilder.create().texOffs(24, 0).addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.6F)), PartPose.offset(5.0F, 2.0F, 0.0F));

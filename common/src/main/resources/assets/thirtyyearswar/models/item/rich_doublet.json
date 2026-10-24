@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "thirtyyearswar:item/rich_doublet",
+    "layer1": "thirtyyearswar:item/rich_doublet_overlay"
+  }
+}

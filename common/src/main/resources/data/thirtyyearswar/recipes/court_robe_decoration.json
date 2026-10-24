@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "CDC",
+    "CCC"
+  ],
+  "key": {
+    "C": {
+      "item": "thirtyyearswar:woollen_cloth"
+    },
+    "D": {
+      "item": "minecraft:black_dye"
+    }
+  },
+  "result": {
+    "item": "thirtyyearswar:court_robe_decoration"
+  }
+}
