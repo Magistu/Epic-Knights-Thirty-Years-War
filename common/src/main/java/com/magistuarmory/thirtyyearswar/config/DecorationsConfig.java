@@ -20,9 +20,15 @@ public final class DecorationsConfig implements ConfigData {
         values.put("baroque_bodice", new DyeSettings());
         values.put("baroque_breeches", new DyeSettings());
         values.put("baroque_buff_waistcoat", new DyeSettings());
+        values.put("baroque_buff_coat", new DyeSettings(0x938467));
         values.put("baroque_cavalier_hat", new DyeSettings());
+        values.put("baroque_cavalry_armour", new DyeSettings(0x938467));
+        values.put("baroque_cavalry_armour_gauntlet", new DyeSettings(0x938467));
         values.put("baroque_cloak", new DyeSettings());
         values.put("baroque_coat", new DyeSettings());
+        values.put("court_robe", new DyeSettings(0x1D1D21));
+        values.put("baroque_dark_cavalry_armour", new DyeSettings(0x938467));
+        values.put("baroque_dark_cavalry_armour_gauntlet", new DyeSettings(0x938467));
         values.put("baroque_dark_officer_armour", new DyeSettings());
         values.put("baroque_dark_pikeman_armour", new DyeSettings());
         values.put("baroque_dark_pikeman_cuirass", new DyeSettings());
@@ -36,7 +42,10 @@ public final class DecorationsConfig implements ConfigData {
         values.put("baroque_panel_cloak", new DyeSettings());
         values.put("baroque_pikeman_armour", new DyeSettings());
         values.put("baroque_pikeman_cuirass", new DyeSettings());
+        values.put("renaissance_cap", new DyeSettings(0x1D1D21));
         values.put("baroque_riders_breeches", new DyeSettings());
+        values.put("rich_breeches", new DyeSettings(0x1D1D21));
+        values.put("rich_doublet", new DyeSettings(0x1D1D21));
         values.put("baroque_shirt", new DyeSettings());
         values.put("baroque_shoulder_sash", new DyeSettings());
         values.put("baroque_skirt", new DyeSettings());
@@ -54,5 +63,11 @@ public final class DecorationsConfig implements ConfigData {
     public static class DyeSettings {
         public boolean enabled = true;
         public int defaultColor = 0xFFFFFF;
+
+        public DyeSettings() {}
+
+        public DyeSettings(int defaultColor) {
+            this.defaultColor = defaultColor;
+        }
     }
 }

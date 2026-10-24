@@ -31,6 +31,11 @@ public final class AddonModels extends ModModelsProvider {
     public static final ModelLayerLocation KNIGHTS_BAROQUE_RUFF_LOCATION = INSTANCE.addArmorModel("knights_baroque_ruff", EquipmentGeometry::knights_baroque_ruff);
     public static final ModelLayerLocation KNIGHTS_BAROQUE_SHORT_RUFF_LOCATION = INSTANCE.addArmorModel("knights_baroque_short_ruff", EquipmentGeometry::knights_baroque_short_ruff);
 
+    public static final ModelLayerLocation COURT_ROBE_LOCATION = INSTANCE.addArmorModel("knights_court_robe", EquipmentGeometry::court_robe);
+    public static final ModelLayerLocation RENAISSANCE_CAP_LOCATION = INSTANCE.addArmorModel("knights_renaissance_cap", EquipmentGeometry::renaissance_cap);
+    public static final ModelLayerLocation RICH_BREECHES_LOCATION = INSTANCE.addArmorModel("knights_rich_breeches", EquipmentGeometry::rich_breeches);
+    public static final ModelLayerLocation RICH_DOUBLET_LOCATION = INSTANCE.addArmorModel("knights_rich_doublet", EquipmentGeometry::rich_doublet);
+
     public static final ModelLayerLocation BAROQUE_APRON_SKIRT_LEGGINGS_MODEL_LOCATION = INSTANCE.addArmorModel("baroque_apron_skirt_leggings_model", EquipmentGeometry::baroque_apron_skirt_leggings_model);
 
     public static final ModelLayerLocation BAROQUE_APRON_SKIRT_BOOTS_MODEL_LOCATION = INSTANCE.addArmorModel("baroque_apron_skirt_boots_model", EquipmentGeometry::baroque_apron_skirt_boots_model);
@@ -55,6 +60,7 @@ public final class AddonModels extends ModModelsProvider {
     public static final ModelLayerLocation BAROQUE_WAIST_SASH_DECORATION_LOCATION = INSTANCE.addDecorationModel("baroque_waist_sash", EquipmentGeometry::knights_baroque_waist_sash);
     public static final ModelLayerLocation BAROQUE_RUFF_DECORATION_LOCATION = INSTANCE.addDecorationModel("baroque_ruff", EquipmentGeometry::knights_baroque_ruff);
     public static final ModelLayerLocation BAROQUE_SHORT_RUFF_DECORATION_LOCATION = INSTANCE.addDecorationModel("baroque_short_ruff", EquipmentGeometry::knights_baroque_short_ruff);
+    public static final ModelLayerLocation COURT_ROBE_DECORATION_LOCATION = INSTANCE.addDecorationModel("court_robe", EquipmentGeometry::court_robe);
 
     public AddonModels() {
         super(ThirtyYearsWar.ID);

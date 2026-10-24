@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "thirtyyearswar:item/baroque_buff_coat"
+    "layer0": "thirtyyearswar:item/baroque_buff_coat",
+    "layer1": "thirtyyearswar:item/baroque_buff_coat_overlay"
   }
 }

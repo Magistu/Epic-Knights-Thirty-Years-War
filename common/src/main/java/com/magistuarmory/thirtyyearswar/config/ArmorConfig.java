@@ -33,6 +33,7 @@ public final class ArmorConfig implements ConfigData {
         values.put("baroque_coat", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 0, 120, 0 }, new Integer[] { 0, 0, 1, 0 }, 9, true));
         values.put("baroque_cuirass", ArmorTypeConfig.of(0.50f, 0.0f, new Integer[] { 0, 0, 315, 0 }, new Integer[] { 0, 0, 6, 0 }, 9, true));
         values.put("baroque_cuirassier_armour", ArmorTypeConfig.of(1.80f, 0.5f, new Integer[] { 0, 0, 440, 0 }, new Integer[] { 0, 0, 6, 0 }, 12, true));
+        values.put("court_robe", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 0, 0, 0 }, new Integer[] { 0, 0, 0, 0 }, 9, true));
         values.put("baroque_dark_barred_closed_burgonet", ArmorTypeConfig.of(1.25f, 0.5f, new Integer[] { 0, 0, 0, 275 }, new Integer[] { 0, 0, 0, 3 }, 9, true));
         values.put("baroque_dark_barred_lobstertail_helmet", ArmorTypeConfig.of(0.60f, 0.0f, new Integer[] { 0, 0, 0, 180 }, new Integer[] { 0, 0, 0, 3 }, 9, true));
         values.put("baroque_dark_cabasset_helmet", ArmorTypeConfig.of(0.60f, 0.0f, new Integer[] { 0, 0, 0, 200 }, new Integer[] { 0, 0, 0, 2 }, 9, true));
@@ -66,8 +67,11 @@ public final class ArmorConfig implements ConfigData {
         values.put("baroque_pikeman_armour", ArmorTypeConfig.of(0.60f, 0.0f, new Integer[] { 0, 0, 365, 0 }, new Integer[] { 0, 0, 8, 0 }, 9, true));
         values.put("baroque_pikeman_cuirass", ArmorTypeConfig.of(0.60f, 0.0f, new Integer[] { 0, 0, 365, 0 }, new Integer[] { 0, 0, 8, 0 }, 9, true));
         values.put("baroque_pikeman_pot_helmet", ArmorTypeConfig.of(0.60f, 0.0f, new Integer[] { 0, 0, 0, 180 }, new Integer[] { 0, 0, 0, 2 }, 9, true));
+        values.put("renaissance_cap", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 0, 0, 100 }, new Integer[] { 0, 0, 0, 1 }, 9, true));
         values.put("baroque_ruff", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 0, 0, 0 }, new Integer[] { 0, 0, 0, 0 }, 9, true));
         values.put("baroque_riders_breeches", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 100, 0, 0 }, new Integer[] { 0, 1, 0, 0 }, 9, true));
+        values.put("rich_breeches", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 100, 0, 0 }, new Integer[] { 0, 1, 0, 0 }, 9, true));
+        values.put("rich_doublet", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 0, 120, 0 }, new Integer[] { 0, 0, 1, 0 }, 9, true));
         values.put("baroque_savoyard_helmet", ArmorTypeConfig.of(1.25f, 0.0f, new Integer[] { 0, 0, 0, 225 }, new Integer[] { 0, 0, 0, 3 }, 9, true));
         values.put("baroque_shirt", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 0, 120, 0 }, new Integer[] { 0, 0, 1, 0 }, 9, true));
         values.put("baroque_short_ruff", ArmorTypeConfig.of(0.00f, 0.0f, new Integer[] { 0, 0, 0, 0 }, new Integer[] { 0, 0, 0, 0 }, 9, true));
